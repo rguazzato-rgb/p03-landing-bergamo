@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Durata: LEGATO-A:P03 -->
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stampa Ordini (uso interno) - Pizzeria Il Girasole</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="container" style="padding-top: var(--space-xl); padding-bottom: var(--space-xxl);">
+
+    <div class="no-print" style="margin-bottom: var(--space-xl);">
+      <span class="label-md" style="display:block; margin-bottom: var(--space-xs);">Uso interno — non condividere questo link</span>
+      <h1 class="headline-lg" style="margin-bottom: var(--space-md);">Stampa ordini del giorno</h1>
+
+      <div class="print-controls">
+        <div class="form-field">
+          <label for="f-data-stampa">Data ordini da stampare</label>
+          <input id="f-data-stampa" type="date">
+        </div>
+        <button type="button" class="btn-primary" id="btn-carica">Carica ordini</button>
+        <button type="button" class="btn-charcoal" id="btn-stampa"><i class="fa-solid fa-print"></i> Stampa</button>
+      </div>
+
+      <p class="body-sm" id="stato-caricamento" style="margin-top: var(--space-md);"></p>
+    </div>
+
+    <div id="slip-container"></div>
+
+  </div>
+
+  <script src="stampa-ordini.js"></script>
+</body>
+</html>

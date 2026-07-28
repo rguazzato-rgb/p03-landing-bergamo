@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <!-- Outer petal gradient (y=0 is base, y=-130 is tip) -->
+    <linearGradient id="petal-grad-outer" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E67E22" />      <!-- Warm dark orange at base -->
+      <stop offset="25%" stop-color="#F39C12" />     <!-- Golden yellow -->
+      <stop offset="70%" stop-color="#FFD600" />     <!-- Sunny yellow -->
+      <stop offset="100%" stop-color="#FFE02B" />    <!-- Bright highlight tip -->
+    </linearGradient>
+    
+    <!-- Inner petal gradient (y=0 is base, y=-110 is tip) -->
+    <linearGradient id="petal-grad-inner" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#D35400" />      <!-- Deep dark orange-red at base -->
+      <stop offset="30%" stop-color="#E67E22" />     <!-- Orange-yellow -->
+      <stop offset="80%" stop-color="#FFC107" />     <!-- Golden amber -->
+      <stop offset="100%" stop-color="#FFD54F" />    <!-- Soft yellow tip -->
+    </linearGradient>
+    
+    <!-- Center disk radial gradient -->
+    <radialGradient id="disk-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D49B2A" />      <!-- Light gold-brown center button -->
+      <stop offset="12%" stop-color="#A86F2C" />     <!-- Medium golden brown -->
+      <stop offset="35%" stop-color="#5C3A21" />     <!-- Dark chocolate brown -->
+      <stop offset="65%" stop-color="#211107" />     <!-- Deep black-brown ring -->
+      <stop offset="80%" stop-color="#3D1E0B" />     <!-- Transition brown -->
+      <stop offset="92%" stop-color="#6E3E15" />     <!-- Outer warm rim -->
+      <stop offset="100%" stop-color="#3A1D08" />    <!-- Very edge dark line -->
+    </radialGradient>
+    
+    <!-- Drop shadow filter for premium logo depth -->
+    <filter id="logo-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+    
+    <!-- Single outer petal definition. Pointing UP to (0,-130). Organic tapered curve. -->
+    <path id="petal-outer" d="M 0,0 C -11,-25 -17,-65 -4,-130 C 1,-130 15,-65 11,-25 Z" fill="url(#petal-grad-outer)"/>
+    
+    <!-- Single inner petal definition. Pointing UP to (0,-110). -->
+    <path id="petal-inner" d="M 0,0 C -9,-20 -15,-55 -3,-110 C 1,-110 13,-55 9,-20 Z" fill="url(#petal-grad-inner)"/>
+  </defs>
+  
+  <!-- Main group with drop shadow -->
+  <g filter="url(#logo-shadow)">
+    <!-- Outer Petal Layer (24 petals rotated by 15 deg) -->
+    <use href="#petal-outer" transform="translate(150, 150) rotate(0)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(15)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(30)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(45)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(60)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(75)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(90)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(105)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(120)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(135)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(150)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(165)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(180)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(195)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(210)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(225)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(240)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(255)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(270)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(285)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(300)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(315)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(330)"/>
+    <use href="#petal-outer" transform="translate(150, 150) rotate(345)"/>
+    
+    <!-- Inner Petal Layer (24 petals sfalsate di 7.5 deg) -->
+    <use href="#petal-inner" transform="translate(150, 150) rotate(7.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(22.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(37.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(52.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(67.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(82.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(97.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(112.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(127.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(142.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(157.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(172.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(187.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(202.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(217.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(232.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(247.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(262.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(277.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(292.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(307.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(322.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(337.5)"/>
+    <use href="#petal-inner" transform="translate(150, 150) rotate(352.5)"/>
+    
+    <!-- Central Seed Disk -->
+    <circle cx="150" cy="150" r="54" fill="url(#disk-grad)" />
+    
+    <!-- Concentric Dash-patterns for realistic florets texture -->
+    <circle cx="150" cy="150" r="10" fill="none" stroke="#E5A93B" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.7"/>
+    <circle cx="150" cy="150" r="14" fill="none" stroke="#C68C1C" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.7"/>
+    <circle cx="150" cy="150" r="18" fill="none" stroke="#8D5524" stroke-width="2.0" stroke-dasharray="4 4" opacity="0.8"/>
+    <circle cx="150" cy="150" r="22" fill="none" stroke="#5C3A21" stroke-width="2.0" stroke-dasharray="2 4" opacity="0.8"/>
+    <circle cx="150" cy="150" r="26" fill="none" stroke="#211107" stroke-width="2.5" stroke-dasharray="4 3" opacity="0.9"/>
+    <circle cx="150" cy="150" r="30" fill="none" stroke="#180C05" stroke-width="2.5" stroke-dasharray="3 4" opacity="0.9"/>
+    <circle cx="150" cy="150" r="34" fill="none" stroke="#211107" stroke-width="2.5" stroke-dasharray="5 4" opacity="0.9"/>
+    <circle cx="150" cy="150" r="38" fill="none" stroke="#3D1E0B" stroke-width="2.5" stroke-dasharray="3 5" opacity="0.8"/>
+    <circle cx="150" cy="150" r="42" fill="none" stroke="#5C3A21" stroke-width="2.0" stroke-dasharray="4 4" opacity="0.8"/>
+    <circle cx="150" cy="150" r="46" fill="none" stroke="#8D5524" stroke-width="2.0" stroke-dasharray="2 4" opacity="0.7"/>
+    <circle cx="150" cy="150" r="50" fill="none" stroke="#C68C1C" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+    <circle cx="150" cy="150" r="52" fill="none" stroke="#FFD54F" stroke-width="1.0" stroke-dasharray="1 3" opacity="0.5"/>
+  </g>
+</svg>

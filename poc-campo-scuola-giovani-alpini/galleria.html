@@ -1,0 +1,165 @@
+<!-- Durata: LEGATO-A:P03 -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galleria Foto e Video — Campo Scuola Giovani Alpini ASB</title>
+<meta name="description" content="Galleria fotografica delle edizioni del Campo Scuola Giovani Alpini di Almenno San Bartolomeo, con filtro per anno.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="poc-banner">PoC — sito dimostrativo per il Campo Scuola Giovani Alpini ASB. Dati da confermare con l'organizzazione.</div>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="foto/sito/logo-ufficiale-web.png" alt="Logo Campo Scuola Giovani Alpini ASB" class="brand-mark">
+      <span class="brand-text">Campo Scuola<br><small>Giovani Alpini ASB</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="chi-siamo.html">Chi Siamo</a>
+      <a href="il-campo.html">Il Campo</a>
+      <a href="calendario.html">Calendario</a>
+      <a href="galleria.html" class="active">Galleria</a>
+      <a href="merch.html">Merchandising</a>
+      <a href="sponsor.html">Sponsor</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contatti.html" class="btn btn-outline btn-sm">Contatti</a>
+      <a href="iscrizioni.html" class="btn btn-primary btn-sm">Iscriviti</a>
+    </div>
+    <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero" style="background-image:linear-gradient(180deg, rgba(20,51,31,0.45) 0%, rgba(20,51,31,0.88) 100%), url('foto/sito/hero-galleria.jpg');background-size:cover;background-position:center;">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Galleria</p>
+    <span class="eyebrow">Foto e video</span>
+    <h1>Galleria</h1>
+    <p>Un archivio visivo delle edizioni passate del campo scuola. Le foto reali verranno caricate in <code>foto/sito/</code>.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="tutti">Tutte le foto</button>
+      <button class="filter-btn" data-filter="vita-gruppo">Vita di gruppo</button>
+      <button class="filter-btn" data-filter="formazione">Formazione</button>
+      <button class="filter-btn" data-filter="cerimonie">Cerimonie ed escursioni</button>
+    </div>
+
+    <div class="grid grid-4 reveal">
+      <div class="gallery-item" data-edizione="vita-gruppo" data-caption="Ragazzi e staff in posa con il cane del campo" data-img="foto/sito/reali/gruppo-cane-prato.jpg"><img class="real-photo placeholder-square" src="foto/sito/reali/gruppo-cane-prato.jpg" alt="Ragazzi e staff in posa con il cane del campo" loading="lazy"></div>
+      <div class="gallery-item" data-edizione="formazione" data-caption="Esercitazione a squadre" data-img="foto/sito/reali/esercitazione-formazione.jpg"><img class="real-photo placeholder-square" src="foto/sito/reali/esercitazione-formazione.jpg" alt="Esercitazione a squadre" loading="lazy"></div>
+      <div class="gallery-item" data-edizione="cerimonie" data-caption="Alzabandiera al mattino" data-img="foto/sito/reali/alzabandiera-adunata.jpg"><img class="real-photo placeholder-square" src="foto/sito/reali/alzabandiera-adunata.jpg" alt="Alzabandiera al mattino" loading="lazy"></div>
+      <div class="gallery-item" data-edizione="formazione" data-caption="Adunata con i mezzi della Protezione Civile" data-img="foto/sito/reali/adunata-protezione-civile.jpg"><img class="real-photo placeholder-square" src="foto/sito/reali/adunata-protezione-civile.jpg" alt="Adunata con i mezzi della Protezione Civile" loading="lazy"></div>
+      <div class="gallery-item" data-edizione="cerimonie" data-caption="In fila sotto la bandiera &quot;Benvenuti Alpini&quot;" data-img="foto/sito/reali/fila-bandiera-benvenuti.jpg"><img class="real-photo placeholder-square" src="foto/sito/reali/fila-bandiera-benvenuti.jpg" alt="In fila sotto la bandiera Benvenuti Alpini" loading="lazy"></div>
+      <div class="gallery-item" data-edizione="cerimonie" data-caption="Foto di gruppo in vetta, alla croce" data-img="foto/sito/reali/vetta-croce-gruppo.jpg"><img class="real-photo placeholder-square" src="foto/sito/reali/vetta-croce-gruppo.jpg" alt="Foto di gruppo in vetta alla croce" loading="lazy"></div>
+      <div class="gallery-item" data-edizione="cerimonie" data-caption="Cerimonia di chiusura, con le famiglie" data-img="foto/sito/reali/cerimonia-chiusura-famiglie.jpg"><img class="real-photo placeholder-square" src="foto/sito/reali/cerimonia-chiusura-famiglie.jpg" alt="Cerimonia di chiusura con le famiglie" loading="lazy"></div>
+      <div class="gallery-item" data-edizione="vita-gruppo" data-caption="Distribuzione della polenta" data-img="foto/sito/reali/distribuzione-polenta.jpg"><img class="real-photo placeholder-square" src="foto/sito/reali/distribuzione-polenta.jpg" alt="Distribuzione della polenta" loading="lazy"></div>
+    </div>
+
+    <p class="mt-sm" style="color:var(--color-text-muted);font-size:var(--fs-xs);">Foto reali del campo, tratte dalla scheda Google Business del Gruppo Alpini Almenno San Bartolomeo — non sono attribuite a un'edizione specifica.</p>
+
+    <p class="mt-lg" style="color:var(--color-text-muted);font-size:var(--fs-sm);">Video delle edizioni passate: <em>link YouTube da confermare</em> — un video generico sul campo è stato individuato su YouTube ma non ancora verificato in dettaglio.</p>
+  </div>
+</section>
+
+<section class="fb-gallery-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Archivio completo</span>
+      <h2>Le foto vere, direttamente da Facebook</h2>
+      <p>Qui sotto vedi gli album e i post fotografici reali pubblicati sulla pagina Facebook del Gruppo Alpini Almenno San Bartolomeo, aggiornati in automatico. Clicca su una foto per aprirla su Facebook.</p>
+    </div>
+
+    <div class="fb-embed-wrap reveal">
+      <iframe
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcamposcuolagiovanialpini&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+        width="500" height="700"
+        style="border:none;overflow:hidden"
+        scrolling="no" frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        loading="lazy"
+        title="Foto e post recenti dalla pagina Facebook del Campo Scuola Giovani Alpini ASB"></iframe>
+    </div>
+
+    <a class="btn btn-primary mt-lg" href="https://www.facebook.com/camposcuolagiovanialpini/photos" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H17V3.7C16.6 3.6 15.5 3.5 14.2 3.5c-2.6 0-4.4 1.6-4.4 4.5v2.9H7v3.1h2.8V21h3.7z"/></svg>
+      Vedi tutte le foto su Facebook
+    </a>
+    <p class="mt-sm" style="color:var(--color-text-muted);font-size:var(--fs-xs);">Il riquadro sopra è il widget ufficiale "Pagina Facebook": mostra i post e le foto reali della pagina, sempre aggiornati. Se non si carica (blocco cookie/ad-blocker/privacy del browser), usa il pulsante qui sopra per andare direttamente su Facebook.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="brand-mark">CS</span> Campo Scuola Giovani Alpini ASB</div>
+        <p>Gruppo Alpini Almenno San Bartolomeo — campo scuola estivo per ragazzi 8-14 anni, nell'Oasi del Brembo.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/camposcuolagiovanialpini/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H17V3.7C16.6 3.6 15.5 3.5 14.2 3.5c-2.6 0-4.4 1.6-4.4 4.5v2.9H7v3.1h2.8V21h3.7z"/></svg></a>
+          <a href="https://www.instagram.com/campo_alpini_asb/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Il Campo</h4>
+        <ul>
+          <li><a href="il-campo.html">Il Campo Scuola</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="iscrizioni.html">Iscrizioni</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Il Gruppo</h4>
+        <ul>
+          <li><a href="chi-siamo.html">Chi Siamo</a></li>
+          <li><a href="galleria.html">Galleria</a></li>
+          <li><a href="sponsor.html">Sponsor</a></li>
+          <li><a href="merch.html">Merchandising</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contatti</h4>
+        <ul>
+          <li>Via Campino, Almenno San Bartolomeo (BG)</li>
+          <li><a href="tel:+390350267127">+39 035 0267127</a></li>
+          <li><a href="mailto:gruppoalpiniasb@gmail.com">gruppoalpiniasb@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Campo Scuola Giovani Alpini — Gruppo Alpini Almenno San Bartolomeo</span>
+      <span><a href="privacy.html">Privacy e Cookie Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox">
+  <div class="lightbox-content">
+    <img class="lightbox-img" src="" alt="">
+    <div class="placeholder placeholder-16-9" style="display:none;">FOTO</div>
+    <p class="lightbox-caption"></p>
+  </div>
+  <button class="lightbox-close" aria-label="Chiudi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lightbox-prev" aria-label="Precedente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <button class="lightbox-next" aria-label="Successiva"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<!-- Durata: LEGATO-A:P03 -->
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Digitale - Pizzeria Il Girasole</title>
+  <meta name="description" content="Esplora il nostro ricchissimo menu digitale di pizze rosse, bianche, scrocchiarele romane, fritture artigianali e birre selezionate. Tutto preparato al momento.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVIGATION HEADER
+       ========================================================================== */ -->
+  <header class="header-nav" id="main-header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo-link" id="logo">
+        <img src="logo-girasole.svg" alt="Logo Pizzeria Il Girasole" class="logo-img">
+        <span class="logo-text">Pizzeria Il Girasole</span>
+      </a>
+
+      <!-- Menu links -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="chi-siamo.html" class="nav-link">Chi Siamo</a>
+        <a href="ordina.html" class="nav-link">Ordina</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <a href="tel:035620828" class="btn-header-call"><i class="fa-solid fa-phone" style="margin-right: 6px;"></i> Chiamaci</a>
+        <button class="btn-mobile-toggle" id="mobile-toggle" aria-label="Apri menu">
+          <i class="fa-solid fa-bars" id="toggle-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MENU HERO (SPECIALITÀ DEL MESE OVERLAY)
+       ========================================================================== */ -->
+  <section class="hero-section" style="min-height: 400px;">
+    <!-- Simple style overrides for background image of this specific hero -->
+    <style>
+      .hero-section::before {
+        background-image: linear-gradient(135deg, rgba(27, 28, 28, 0.5) 0%, rgba(27, 28, 28, 0.3) 100%), 
+                          url('https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=1600&auto=format&fit=crop');
+      }
+    </style>
+    <div class="container" style="position: relative; z-index: 2; text-align: left; margin: 0;">
+      <!-- White Overlay Card on the left -->
+      <div class="value-card-text" style="background-color: rgba(255, 255, 255, 0.96); padding: var(--space-xl); border-radius: var(--rounded-lg); max-width: 480px; box-shadow: var(--shadow-soft);">
+        <span class="label-md" style="margin-bottom: var(--space-xs); display: block;">Specialità del Mese</span>
+        <h2 class="headline-lg" style="margin-bottom: var(--space-sm);">Pistacchio & Mortazza</h2>
+        <p class="body-sm" style="margin-bottom: var(--space-lg); color: var(--color-secondary);">Mortadella Bologna IGP, granella di pistacchio di Bronte e stracciatella fresca su base bianca croccante.</p>
+        <div>
+          <a href="tel:035620828" class="btn-primary">Ordina Ora — €14.50</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE TITLE & CATEGORY FILTER BAR
+       ========================================================================== */ -->
+  <section class="menu-filter-section" style="background-color: var(--color-surface); padding-bottom: 0;">
+    <div class="container text-center">
+      <h1 class="headline-lg" style="margin-bottom: var(--space-xl);">Menu Digitale</h1>
+      
+      <!-- Horizontal Scrollable Category Chips -->
+      <div class="filter-bar-container" id="category-filter-bar">
+        <button class="btn-filter-chip active" data-target="pizze-classiche">Pizze Classiche</button>
+        <button class="btn-filter-chip" data-target="pizze-speciali">Pizze Speciali</button>
+        <button class="btn-filter-chip" data-target="schiacciatine">Schiacciatine</button>
+        <button class="btn-filter-chip" data-target="scrocchiarella">Scrocchiarella</button>
+        <button class="btn-filter-chip" data-target="aggiunte">Aggiunte</button>
+        <button class="btn-filter-chip" data-target="fritture">Le Fritture</button>
+        <button class="btn-filter-chip" data-target="bibite">Birre & Bibite</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PRODUCT SECTIONS
+       ========================================================================== */ -->
+  <section class="menu-products-section" style="padding-top: var(--space-lg);">
+    <div class="container">
+      
+      <!-- ==================== PIZZE CLASSICHE ==================== -->
+      <div id="pizze-classiche" class="menu-category-anchor">
+        <div class="menu-category-title">
+          <i class="fa-solid fa-pizza-slice"></i>
+          <h2 class="headline-md">Pizze Classiche</h2>
+        </div>
+        
+        <div class="pizza-list-card">
+          <div class="pizza-list-grid">
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>4 formaggi</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, grana, zola, taleggio.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>4 stagioni</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, prosciutto, carciofi, funghi.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Asparagi</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, asparagi.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Asparagi e uovo</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, asparagi, uovo.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Branzi</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, branzi.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Bresaola</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, bresaola.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Bresaola e porcini</strong><span class="pizza-list-price">€8.00</span></div><p class="body-sm">Pomodoro, mozzarella, bresaola, porcini.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Brie</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, brie.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Calzone normale</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, prosciutto, funghi.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Calzone farcito</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, prosciutto, funghi, carciofi, acciughe.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Caprese</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, pomodoro tagliato a fette, origano.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Capricciosa</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, prosciutto, funghi, carciofi, acciughe.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Carciofi</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, carciofi.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Cipolle</strong><span class="pizza-list-price">€6.00</span></div><p class="body-sm">Pomodoro, mozzarella, cipolle.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Crudo</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, crudo.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Diavola</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, salamino piccante, peperoncino.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Friarielli</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, friarielli.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Frutti di mare</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, frutti di mare.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Funghi</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, funghi.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Funghi porcini</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, funghi porcini.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Gamberetti</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, gamberetti.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Gamberetti e rucola</strong><span class="pizza-list-price">€8.00</span></div><p class="body-sm">Pomodoro, mozzarella, gamberetti, rucola.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Gamberetti rucola e salsa rosa</strong><span class="pizza-list-price">€8.50</span></div><p class="body-sm">Pomodoro, mozzarella, gamberetti, rucola, salsa rosa.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Girasole</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, salame nostrano, peperoni agrodolci.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Grana</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, formaggio grana.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Margherita</strong><span class="pizza-list-price">€5.50</span></div><p class="body-sm">Pomodoro, mozzarella.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Mari e monti</strong><span class="pizza-list-price">€8.50</span></div><p class="body-sm">Pomodoro, mozzarella, funghi porcini, frutti di mare.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Marinara</strong><span class="pizza-list-price">€4.50</span></div><p class="body-sm">Pomodoro, aglio, origano.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Melanzane</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, melanzane grigliate.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Mozzarella di bufala</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella di bufala, origano.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Napoli</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, acciughe, capperi.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Pancetta</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, pancetta.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Pancetta e uovo</strong><span class="pizza-list-price">€8.00</span></div><p class="body-sm">Pomodoro, mozzarella, pancetta, uovo.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Papà</strong><span class="pizza-list-price">€8.50</span></div><p class="body-sm">Pomodoro, mozzarella, prosciutto, porcini, salamino, grana.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Parmigiana</strong><span class="pizza-list-price">€8.50</span></div><p class="body-sm">Pomodoro, mozzarella, melanzane grigliate, grana, olive.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Patapizza</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, patatine fritte.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Peperoni</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, peperoni agrodolci.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Peperoni grigliati</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, peperoni grigliati.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Pomodorini</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, pomodorini, origano.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Prosciutto</strong><span class="pizza-list-price">€6.00</span></div><p class="body-sm">Pomodoro, mozzarella, prosciutto.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Prosciutto e funghi</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, prosciutto, funghi.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Prosciutto e provolone</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, prosciutto, provolone, origano.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Provolone</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, provolone.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Pugliese</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, cipolle, olive nere.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Ricotta</strong><span class="pizza-list-price">€6.00</span></div><p class="body-sm">Pomodoro, mozzarella, ricotta.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Romana</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, capperi, olive nere.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Rucola</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, rucola.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Salame</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, salame.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Salamino</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, salamino piccante.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Salmone</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, salmone.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Salsiccia</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, salsiccia.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Scamorza</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, scamorza.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Scamorza e porcini</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, scamorza, porcini.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Scamorza e rucola</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, scamorza, rucola.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Siciliana</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, salamino, olive nere, capperi.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Speck</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, speck.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Speck e brie</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, speck, brie.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Speck e zola</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, speck, zola.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Spinaci</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, spinaci, grana.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Spinaci e panna</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, spinaci, panna.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Spinaci e ricotta</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, spinaci, ricotta.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Taleggio</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, taleggio.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Tonno</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, tonno.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Tonno e cipolle</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, tonno, cipolle.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Tris di verdure</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, spinaci, asparagi, rucola.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Verdure grigliate</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, peperoni, melanzane, zucchine grigliate.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Vulcano</strong><span class="pizza-list-price">€9.00</span></div><p class="body-sm">Pomodoro, mozzarella, carciofi, funghi, prosciutto, acciughe.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Wurstel</strong><span class="pizza-list-price">€6.00</span></div><p class="body-sm">Pomodoro, mozzarella, wurstel.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Wurstel e patatine</strong><span class="pizza-list-price">€7.00</span></div><p class="body-sm">Pomodoro, mozzarella, wurstel, patatine fritte.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Zingara</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, peperoni agrodolci, salamino piccante, olive nere.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Zola</strong><span class="pizza-list-price">€6.50</span></div><p class="body-sm">Pomodoro, mozzarella, zola.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Zola e noci</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, zola dolce, noci.</p></div>
+            <div class="pizza-list-item"><div class="pizza-list-item-head"><strong>Zucchine grigliate</strong><span class="pizza-list-price">€7.50</span></div><p class="body-sm">Pomodoro, mozzarella, zucchine grigliate.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PIZZE SPECIALI ==================== -->
+      <div id="pizze-speciali" class="menu-category-anchor" style="margin-top: var(--space-xxl);">
+        <div class="menu-category-title">
+          <i class="fa-solid fa-star" style="color: var(--color-primary);"></i>
+          <h2 class="headline-md">Pizze Speciali</h2>
+        </div>
+        
+        <div class="pizza-grid">
+          <!-- Pizza: Primavera -->
+          <article class="pizza-card">
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Primavera</h3>
+                <span class="pizza-card-price">€8.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Pomodoro, mozzarella, asparagi, pancetta, scamorza.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pizza: Ligure -->
+          <article class="pizza-card">
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Ligure</h3>
+                <span class="pizza-card-price">€7.50</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Base bianca, pesto, mozzarella, olive nere, scaglie di grana.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pizza: Sfiziosa -->
+          <article class="pizza-card">
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Sfiziosa</h3>
+                <span class="pizza-card-price">€8.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Base bianca, mozzarella, zola dolce, prosciutto, funghi porcini.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pizza: Nostrana -->
+          <article class="pizza-card">
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Nostrana</h3>
+                <span class="pizza-card-price">€8.50</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Pomodoro, mozzarella, funghi porcini, salsiccia, grana.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pizza: Delicata -->
+          <article class="pizza-card">
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Delicata</h3>
+                <span class="pizza-card-price">€9.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Pomodoro, mozzarella, zucchine, gamberetti, ricotta.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pizza: Estiva -->
+          <article class="pizza-card">
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Estiva</h3>
+                <span class="pizza-card-price">€8.50</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Pomodoro, mozzarella di bufala, pomodorini, crudo.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pizza: Invernale -->
+          <article class="pizza-card">
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Invernale</h3>
+                <span class="pizza-card-price">€8.50</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Pomodoro, mozzarella, friarielli, salsiccia, grana.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pizza: Appetitosa -->
+          <article class="pizza-card">
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Appetitosa</h3>
+                <span class="pizza-card-price">€8.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Pomodoro, mozzarella, pancetta, taleggio, rucola.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ==================== SCHIACCIATINE ==================== -->
+      <div id="schiacciatine" class="menu-category-anchor" style="margin-top: var(--space-xxl);">
+        <div class="menu-category-title">
+          <i class="fa-solid fa-bread-slice" style="color: var(--color-primary);"></i>
+          <h2 class="headline-md">Schiacciatine</h2>
+        </div>
+        
+        <div class="pizza-grid">
+          <!-- Schiacciatina 1 -->
+          <article class="pizza-card">
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Schiacciatina</h3>
+                <span class="pizza-card-price">€4.50</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Olio extra vergine, origano, sale.</p>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Schiacciatina con cipolle -->
+          <article class="pizza-card">
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Schiacciatina con cipolle</h3>
+                <span class="pizza-card-price">€5.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Olio extra vergine, origano, sale, cipolle.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ==================== PIZZA IN EVIDENZA BANNER ==================== -->
+      <div style="margin-top: var(--space-xxl);">
+        <div class="pizza-banner-card">
+          <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600&auto=format&fit=crop" alt="Scrocchiarella N. 1" class="pizza-banner-img">
+          <div class="pizza-banner-content">
+            <span class="label-md">Consigliata dallo Chef</span>
+            <h3 class="headline-lg">Scrocchiarella N. 1</h3>
+            <p class="body-md">La nostra scrocchiarella premium con mortadella saporita, burrata di bufala fresca e un tocco di pesto al pistacchio su base croccante.</p>
+            <div class="pizza-banner-footer">
+              <span class="pizza-banner-price">€23.00</span>
+              <a href="tel:035620828" class="btn-charcoal"><i class="fa-solid fa-phone"></i> Ordina Ora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== SCROCCHIARELLA ==================== -->
+      <div id="scrocchiarella" class="menu-category-anchor" style="margin-top: var(--space-lg);">
+        <div class="menu-category-title">
+          <i class="fa-solid fa-cheese"></i>
+          <h2 class="headline-md">Scrocchiarella Romane</h2>
+        </div>
+        
+        <div class="pizza-grid">
+          <!-- Scrocchiarella: Focaccia -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-container" style="aspect-ratio: 1/1;">
+              <img src="https://images.unsplash.com/photo-1555072956-7758afb20e8f?q=80&w=600&auto=format&fit=crop" alt="Scrocchiarella Focaccia" class="pizza-card-img">
+            </div>
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Focaccia</h3>
+                <span class="pizza-card-price">€12.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Olio extra vergine, origano.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Scrocchiarella: Margherita -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-container" style="aspect-ratio: 1/1;">
+              <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600&auto=format&fit=crop" alt="Scrocchiarella Margherita" class="pizza-card-img">
+            </div>
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Margherita</h3>
+                <span class="pizza-card-price">€17.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Pomodoro, mozzarella.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Scrocchiarella: Farcita -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-container" style="aspect-ratio: 1/1;">
+              <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=600&auto=format&fit=crop" alt="Scrocchiarella Farcita" class="pizza-card-img">
+            </div>
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Farcita</h3>
+                <span class="pizza-card-price">da €19.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Farcitura personalizzata in base alla scelta degli ingredienti.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Scrocchiarella: N. 1 -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-container" style="aspect-ratio: 1/1;">
+              <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600&auto=format&fit=crop" alt="Scrocchiarella N. 1" class="pizza-card-img">
+            </div>
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Scrocchiarella N. 1</h3>
+                <span class="pizza-card-price">€23.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Mortadella, burrata di bufala, pesto di pistacchio.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Scrocchiarella: N. 2 -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-container" style="aspect-ratio: 1/1;">
+              <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?q=80&w=600&auto=format&fit=crop" alt="Scrocchiarella N. 2" class="pizza-card-img">
+            </div>
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Scrocchiarella N. 2</h3>
+                <span class="pizza-card-price">€22.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Pomodoro, mozzarella, cipolle caramellate, scamorza, speck.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Scrocchiarella: N. 3 -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-container" style="aspect-ratio: 1/1;">
+              <img src="https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=600&auto=format&fit=crop" alt="Scrocchiarella N. 3" class="pizza-card-img">
+            </div>
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Scrocchiarella N. 3</h3>
+                <span class="pizza-card-price">€23.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Base bianca, salmone, ricotta, pomodorini.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Scrocchiarella: N. 4 -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-container" style="aspect-ratio: 1/1;">
+              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600&auto=format&fit=crop" alt="Scrocchiarella N. 4" class="pizza-card-img">
+            </div>
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Scrocchiarella N. 4</h3>
+                <span class="pizza-card-price">€23.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Pomodoro, mozzarella di bufala, zucchine, pomodorini.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Scrocchiarella: N. 5 -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-container" style="aspect-ratio: 1/1;">
+              <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?q=80&w=600&auto=format&fit=crop" alt="Scrocchiarella N. 5" class="pizza-card-img">
+            </div>
+            <div class="pizza-card-content">
+              <div class="pizza-card-header">
+                <h3 class="pizza-card-title">Scrocchiarella N. 5</h3>
+                <span class="pizza-card-price">€22.00</span>
+              </div>
+              <div class="pizza-card-ingredients">
+                <p class="body-sm">Base bianca, mozzarella, stracchino del Monte Bronzone, funghi misto bosco.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ==================== AGGIUNTE & SUPPLEMENTI ==================== -->
+      <div id="aggiunte" class="menu-category-anchor" style="margin-top: var(--space-xxl);">
+        <div class="menu-category-title">
+          <i class="fa-solid fa-circle-plus" style="color: var(--color-primary);"></i>
+          <h2 class="headline-md">Aggiunte & Supplementi</h2>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
+
+          <!-- Scelta dell'Impasto -->
+          <div style="background-color: var(--color-surface-container-lowest); padding: var(--space-xl); border-radius: var(--rounded-lg); box-shadow: var(--shadow-soft);">
+            <h4 style="margin-bottom: var(--space-md); color: var(--color-primary); font-family: var(--font-headline); font-size: 18px; font-weight: 700;">
+              <i class="fa-solid fa-wheat-awn" style="margin-right: 8px;"></i>Scelta dell'Impasto
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-md);">
+              <!-- Kamut -->
+              <div style="border: 1px solid var(--brand-muted-border); border-radius: var(--rounded-md); padding: var(--space-md);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <span style="font-family: var(--font-headline); font-weight: 700; font-size: 16px; color: var(--brand-charcoal);">Pasta Kamut</span>
+                  <strong class="list-menu-price" style="color: var(--color-primary);">+ €1.50</strong>
+                </div>
+                <p class="body-sm" style="color: var(--color-secondary);">Impasto realizzato con farina di grano Khorasan, dal gusto dolce e ricco di proteine.</p>
+              </div>
+              <!-- Integrale -->
+              <div style="border: 1px solid var(--brand-muted-border); border-radius: var(--rounded-md); padding: var(--space-md);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <span style="font-family: var(--font-headline); font-weight: 700; font-size: 16px; color: var(--brand-charcoal);">Pasta Integrale</span>
+                  <strong class="list-menu-price" style="color: var(--color-primary);">+ €1.00</strong>
+                </div>
+                <p class="body-sm" style="color: var(--color-secondary);">Impasto con farina integrale, più ricco di fibre e dal sapore rustico e genuino.</p>
+              </div>
+              <!-- Senza Glutine -->
+              <div style="border: 2px solid #e8a000; border-radius: var(--rounded-md); padding: var(--space-md); background-color: #fffdf0;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <span style="font-family: var(--font-headline); font-weight: 700; font-size: 16px; color: var(--brand-charcoal);">Pasta Senza Glutine</span>
+                  <strong class="list-menu-price" style="color: var(--color-primary);">+ €4.00</strong>
+                </div>
+                <p class="body-sm" style="color: var(--color-secondary); margin-bottom: 10px;">Impasto appositamente formulato senza glutine.</p>
+                <div style="display: flex; align-items: flex-start; gap: 8px; background-color: #fff3cd; border: 1px solid #e8a000; border-radius: var(--rounded-sm); padding: 10px;">
+                  <i class="fa-solid fa-triangle-exclamation" style="color: #b57a00; font-size: 14px; margin-top: 1px; flex-shrink: 0;"></i>
+                  <p style="font-family: var(--font-body); font-size: 13px; color: #7a5200; line-height: 1.5; margin: 0;">
+                    <strong>Nota importante:</strong> La pizza senza glutine è indicata per persone <strong>intolleranti al glutine</strong>, non per soggetti con celiachia o allergie, in quanto la cucina non è certificata e potrebbe esserci <strong>contaminazione crociata</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Supplementi Ingredienti -->
+          <div style="background-color: var(--color-surface-container-lowest); padding: var(--space-xl); border-radius: var(--rounded-lg); box-shadow: var(--shadow-soft);">
+            <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
+              
+              <div>
+                <h4 style="margin-bottom: var(--space-sm); color: var(--color-primary); font-family: var(--font-headline); font-size: 18px; font-weight: 700;">
+                  Supplemento Standard (+ €1.00)
+                </h4>
+                <p class="body-sm" style="color: var(--color-secondary); line-height: 1.6; font-size: 15px;">
+                  Crudo, speck, bresaola, mortadella, salsiccia, salame, frutti di mare, gamberetti, salmone, tonno, acciughe, cipolle caramellate, olive taggiasche, friarielli, uovo, porcini, branzi, mozzarella di bufala, patatine.
+                </p>
+              </div>
+              
+              <hr style="border: 0; border-top: 1px solid var(--brand-muted-border); margin: var(--space-sm) 0;">
+              
+              <div>
+                <h4 style="margin-bottom: var(--space-sm); color: var(--color-primary); font-family: var(--font-headline); font-size: 18px; font-weight: 700;">
+                  Altri Supplementi
+                </h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: var(--space-md); margin-top: var(--space-md);">
+                  <div class="list-menu-item" style="border-bottom: 1px dashed var(--brand-muted-border); padding: 8px 0; display: flex; justify-content: space-between;">
+                    <span class="body-sm" style="font-weight: 600; color: var(--brand-charcoal);">Burrata di bufala</span>
+                    <strong class="list-menu-price">€3.00</strong>
+                  </div>
+                  <div class="list-menu-item" style="border-bottom: 1px dashed var(--brand-muted-border); padding: 8px 0; display: flex; justify-content: space-between;">
+                    <span class="body-sm" style="font-weight: 600; color: var(--brand-charcoal);">Mozzarella senza lattosio</span>
+                    <strong class="list-menu-price">€1.50</strong>
+                  </div>
+                  <div class="list-menu-item" style="border-bottom: 1px dashed var(--brand-muted-border); padding: 8px 0; display: flex; justify-content: space-between;">
+                    <span class="body-sm" style="font-weight: 600; color: var(--brand-charcoal);">Ogni altro ingrediente</span>
+                    <strong class="list-menu-price">€0.50</strong>
+                  </div>
+                  <div class="list-menu-item" style="border-bottom: 1px dashed var(--brand-muted-border); padding: 8px 0; display: flex; justify-content: space-between;">
+                    <span class="body-sm" style="font-weight: 600; color: var(--brand-charcoal);">Doppia farcitura</span>
+                    <strong class="list-menu-price">€1.00</strong>
+                  </div>
+                  <div class="list-menu-item" style="border-bottom: 1px dashed var(--brand-muted-border); padding: 8px 0; display: flex; justify-content: space-between;">
+                    <span class="body-sm" style="font-weight: 600; color: var(--brand-charcoal);">Doppia mozzarella</span>
+                    <strong class="list-menu-price">€1.00</strong>
+                  </div>
+                  <div class="list-menu-item" style="border-bottom: 1px dashed var(--brand-muted-border); padding: 8px 0; display: flex; justify-content: space-between;">
+                    <span class="body-sm" style="font-weight: 600; color: var(--brand-charcoal);">Per pizza piccola</span>
+                    <strong class="list-menu-price">-€1.00</strong>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Porzioni Scrocchiarella -->
+          <div style="background-color: var(--color-surface-container-lowest); padding: var(--space-xl); border-radius: var(--rounded-lg); box-shadow: var(--shadow-soft);">
+            <h4 style="margin-bottom: var(--space-md); color: var(--color-primary); font-family: var(--font-headline); font-size: 18px; font-weight: 700;">
+              <i class="fa-solid fa-pizza-slice" style="margin-right: 8px;"></i>Scrocchiarella — Porzioni Disponibili
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--space-md);">
+              <div style="border: 1px solid var(--brand-muted-border); border-radius: var(--rounded-md); padding: var(--space-md); text-align: center;">
+                <i class="fa-solid fa-circle-half-stroke" style="font-size: 28px; color: var(--color-primary); margin-bottom: 8px;"></i>
+                <p style="font-family: var(--font-headline); font-weight: 700; font-size: 17px; color: var(--brand-charcoal); margin-bottom: 4px;">Mono Porzione</p>
+                <p class="body-sm" style="color: var(--color-secondary);">Ideale per una persona. Dimensione individuale della nostra scrocchiarella croccante.</p>
+              </div>
+              <div style="border: 2px solid var(--brand-yellow); border-radius: var(--rounded-md); padding: var(--space-md); text-align: center; background-color: #fffdf0;">
+                <i class="fa-solid fa-circle" style="font-size: 28px; color: var(--color-primary); margin-bottom: 8px;"></i>
+                <p style="font-family: var(--font-headline); font-weight: 700; font-size: 17px; color: var(--brand-charcoal); margin-bottom: 4px;">Bi Porzione</p>
+                <p class="body-sm" style="color: var(--color-secondary);">Formato da condividere in due. La scelta perfetta per una serata in coppia.</p>
+              </div>
+            </div>
+            <p class="body-sm" style="color: var(--color-secondary); margin-top: var(--space-md); font-style: italic;">
+              Specifica la porzione desiderata al momento dell'ordine. I prezzi indicati nel menu si riferiscono alla mono porzione.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==================== FRITTURE & BIBITE ==================== -->
+      <div class="list-section-grid" style="margin-top: var(--space-xxl);">
+        <!-- Column 1: Le Fritture -->
+        <div id="fritture" class="menu-category-anchor">
+          <div class="menu-category-title">
+            <i class="fa-solid fa-bowl-food"></i>
+            <h2 class="headline-md">Le Fritture</h2>
+          </div>
+          
+          <div class="list-section-card">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=400&auto=format&fit=crop" alt="Le Fritture" class="list-section-img">
+            <div class="list-section-content">
+              <div class="list-menu-items">
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Crocchette di Patate (8pz)</span>
+                  <span class="list-menu-price">€3.00</span>
+                </div>
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Crocchette di Pollo (8pz)</span>
+                  <span class="list-menu-price">€3.00</span>
+                </div>
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Olive Ascolane (8pz)</span>
+                  <span class="list-menu-price">€3.00</span>
+                </div>
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Arancini alla siciliana (8pz)</span>
+                  <span class="list-menu-price">€3.00</span>
+                </div>
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Patatine Fritte Piccole</span>
+                  <span class="list-menu-price">€2.00</span>
+                </div>
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Patatine Fritte Medie</span>
+                  <span class="list-menu-price">€3.00</span>
+                </div>
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Patatine Fritte Grandi</span>
+                  <span class="list-menu-price">€5.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Birre & Bibite -->
+        <div id="bibite" class="menu-category-anchor">
+          <div class="menu-category-title">
+            <i class="fa-solid fa-beer-mug-empty"></i>
+            <h2 class="headline-md">Birre & Bibite</h2>
+          </div>
+          
+          <div class="list-section-card">
+            <img src="https://images.unsplash.com/photo-1600788886242-5c96aabe3757?q=80&w=400&auto=format&fit=crop" alt="Birre & Bibite" class="list-section-img">
+            <div class="list-section-content">
+              <div class="list-menu-items">
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Birra Moretti (0.66l)</span>
+                  <span class="list-menu-price">€3.00</span>
+                </div>
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Birra Leffe Bionda / Ambrata (0.75l)</span>
+                  <span class="list-menu-price">€5.00</span>
+                </div>
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Ichnusa (0.33l)</span>
+                  <span class="list-menu-price">€2.50</span>
+                </div>
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Coca Cola / Coca Cola 0 / Sprite / Fanta (0.33l)</span>
+                  <span class="list-menu-price">€2.00</span>
+                </div>
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Coca Cola / Sprite / Fanta (1l)</span>
+                  <span class="list-menu-price">€3.00</span>
+                </div>
+
+                <div class="list-menu-item">
+                  <span class="list-menu-name">Acqua (0.33l)</span>
+                  <span class="list-menu-price">€1.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CTA CALLOUT BANNER
+       ========================================================================== */ -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-banner-container">
+        <div class="cta-banner-text">
+          <h3>Ti aspettiamo... o veniamo noi da te!</h3>
+          <p class="body-md">Chiama subito per ordinare le tue pizze preferite o scegli tra asporto o consegna a domicilio</p>
+        </div>
+        <a href="tel:035620828" class="btn-charcoal" style="white-space: nowrap;"><i class="fa-solid fa-phone"></i> 035 620828</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== */ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-col-brand">
+          <h4>Pizzeria Il Girasole</h4>
+          <p class="body-sm">Pizzeria artigianale a Brembate Sopra. Passione, tradizione e ingredienti di prima scelta ogni giorno.</p>
+        </div>
+        <!-- Legal Links -->
+        <div>
+          <h5 class="footer-col-title">Links</h5>
+          <div class="footer-links">
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="termini.html" class="footer-link">Terms of Service</a>
+          </div>
+        </div>
+        <!-- Social Links -->
+        <div>
+          <h5 class="footer-col-title">Seguici</h5>
+          <div class="footer-links">
+            <a href="https://www.instagram.com/pizzeria_ilgirasole/" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/p/Pizzeria_Il-Girasole-100057613862609/" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright & Bottom info -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Pizzeria Il Girasole. All rights reserved.</p>
+        <p class="footer-copyright" style="color: var(--color-outline);">Via Centurelli 7, Brembate Sopra (BG)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

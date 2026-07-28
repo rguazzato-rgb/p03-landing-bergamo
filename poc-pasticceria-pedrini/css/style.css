@@ -1,0 +1,727 @@
+/* Durata: LEGATO-A:P03 */
+:root {
+  --blu-pedrini: #6f8fb3;
+  --blu-scuro: #3d5773;
+  --crema: #f3ead8;
+  --crema-chiaro: #faf6ec;
+  --rosa-cipria: #e9d3d0;
+  --testo: #2c2a26;
+  --testo-chiaro: #6b6559;
+  --arancio-accento: #e0862f;
+  --radius: 14px;
+  --font-titoli: 'Fraunces', Georgia, serif;
+  --font-corpo: 'Jost', 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-corpo);
+  color: var(--testo);
+  background: var(--crema-chiaro);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--crema-chiaro);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-titoli);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--blu-scuro);
+}
+
+.logo-nav img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.nav-links a:hover { color: var(--blu-scuro); }
+
+.btn-whatsapp {
+  background: var(--blu-scuro);
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background .2s;
+}
+.btn-whatsapp:hover { background: var(--arancio-accento); }
+
+.nav-toggle { display: none; }
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+}
+
+.hero img.hero-bg {
+  position: absolute;
+  inset: -6% 0 0 0;
+  width: 100%;
+  height: 112%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(61,87,115,0.15) 0%, rgba(30,26,20,0.75) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 24px 56px;
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  color: var(--crema);
+  margin-bottom: 14px;
+}
+
+.hero-content h1 {
+  font-family: var(--font-titoli);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 600;
+  max-width: 640px;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  max-width: 480px;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 28px;
+}
+
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.btn-primario {
+  background: var(--arancio-accento);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.btn-primario:hover { background: #c76f22; }
+
+.btn-secondario {
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+}
+.btn-secondario:hover { background: rgba(255,255,255,0.12); }
+
+.rating-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+  background: rgba(255,255,255,0.92);
+  color: var(--testo);
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+.rating-badge strong { color: var(--arancio-accento); }
+
+/* Sezioni generiche */
+section { padding: 80px 0; }
+
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: var(--arancio-accento);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.section-title {
+  font-family: var(--font-titoli);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--blu-scuro);
+  margin-bottom: 18px;
+}
+
+.section-lead {
+  max-width: 620px;
+  color: var(--testo-chiaro);
+  font-size: 1.05rem;
+}
+
+/* Filosofia / valori */
+.valori {
+  background: var(--crema);
+}
+
+.valori-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.valore-card {
+  background: var(--crema-chiaro);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+}
+
+.valore-card .numero {
+  font-family: var(--font-titoli);
+  font-size: 2rem;
+  color: var(--blu-scuro);
+  opacity: 0.35;
+  margin-bottom: 10px;
+}
+
+.valore-card h3 {
+  font-family: var(--font-titoli);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  color: var(--testo);
+}
+
+.valore-card p { color: var(--testo-chiaro); font-size: 0.95rem; }
+
+/* Galleria prodotti */
+.prodotti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.prodotto-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/5;
+  box-shadow: 0 10px 30px rgba(61,87,115,0.12);
+}
+
+.prodotto-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+.prodotto-card:hover img { transform: scale(1.05); }
+
+.prodotto-label {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background: linear-gradient(0deg, rgba(20,17,12,0.78), transparent);
+  color: #fff;
+  padding: 20px 18px 16px;
+  font-family: var(--font-titoli);
+  font-size: 1.15rem;
+}
+
+/* Recensioni */
+.recensioni { background: var(--blu-scuro); color: #fff; }
+.recensioni .section-title { color: var(--crema); }
+.recensioni .section-lead { color: rgba(255,255,255,0.75); }
+
+.recensioni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 44px;
+}
+
+.recensione-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 26px;
+}
+
+.recensione-stelle { color: var(--arancio-accento); margin-bottom: 12px; letter-spacing: 2px; }
+
+.recensione-testo {
+  font-family: var(--font-titoli);
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.recensione-autore { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+
+/* Dove siamo */
+.dove-siamo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.info-lista { list-style: none; margin-top: 24px; }
+.info-lista li {
+  display: flex;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.info-lista .icona { font-size: 1.2rem; }
+.info-lista strong { display: block; color: var(--blu-scuro); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+
+.mappa-wrap {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(61,87,115,0.15);
+}
+.mappa-wrap iframe { width: 100%; height: 420px; border: 0; display: block; }
+
+/* CTA finale */
+.cta-finale {
+  background: linear-gradient(135deg, var(--blu-scuro), #2a3f56);
+  color: #fff;
+  text-align: center;
+}
+.cta-finale h2 {
+  font-family: var(--font-titoli);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 16px;
+}
+.cta-finale p { color: rgba(255,255,255,0.8); max-width: 480px; margin: 0 auto 28px; }
+
+/* Footer */
+footer {
+  background: var(--crema);
+  padding: 40px 0 26px;
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.footer-brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-titoli); font-size: 1.1rem; color: var(--blu-scuro); }
+.footer-brand img { width: 32px; height: 32px; border-radius: 50%; }
+.footer-links { display: flex; gap: 20px; font-size: 0.9rem; color: var(--testo-chiaro); flex-wrap: wrap; }
+.footer-bottom {
+  padding-top: 20px;
+  font-size: 0.8rem;
+  color: var(--testo-chiaro);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* WhatsApp float */
+.wa-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 200;
+  background: #25D366;
+  color: #fff;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* ============================
+   Animazioni di scorrimento
+   ============================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);
+    transition-delay: var(--reveal-delay, 0s);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-zoom {
+    opacity: 0;
+    transform: scale(0.94);
+    transition: opacity .8s ease, transform .8s cubic-bezier(.22,.61,.36,1);
+    transition-delay: var(--reveal-delay, 0s);
+  }
+  .reveal-zoom.is-visible { opacity: 1; transform: scale(1); }
+
+  .reveal-side {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1);
+    transition-delay: var(--reveal-delay, 0s);
+  }
+  .reveal-side.is-visible { opacity: 1; transform: translateX(0); }
+  .reveal-side.da-destra { transform: translateX(32px); }
+}
+
+/* Separatore "glassa" tra sezioni: linea che si disegna sullo scroll */
+.glassa-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 0 8px;
+}
+.glassa-divider svg { width: 120px; height: 18px; overflow: visible; }
+.glassa-divider path {
+  fill: none;
+  stroke: var(--arancio-accento);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  transition: stroke-dashoffset 1.1s ease;
+}
+.glassa-divider.is-visible path { stroke-dashoffset: 0; }
+
+/* Briciole/sprinkle fluttuanti nell'hero — sottile, a tema pasticceria */
+.crumbs { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.crumb {
+  position: absolute;
+  bottom: -40px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: float-crumb 9s ease-in infinite;
+}
+@keyframes float-crumb {
+  0% { opacity: 0; transform: translateY(0) rotate(0deg); }
+  10% { opacity: .55; }
+  85% { opacity: .35; }
+  100% { opacity: 0; transform: translateY(-70vh) rotate(200deg); }
+}
+
+/* Numeri "01/02/03" che si disegnano leggermente sfalsati */
+.valore-card { transition: transform .35s ease, box-shadow .35s ease; }
+.valore-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(61,87,115,0.14); }
+
+/* Prodotto-card: sollevamento più deciso in stile "vetrina" */
+.prodotto-card { transition: transform .4s ease, box-shadow .4s ease; }
+.prodotto-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(61,87,115,0.22); }
+
+/* Torte: card con etichetta stile cartellino vetrina */
+.torte-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 26px;
+  margin-top: 44px;
+}
+.torta-card {
+  background: var(--crema-chiaro);
+  border-radius: var(--radius);
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(61,87,115,0.1);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.torta-card:hover { transform: translateY(-6px) rotate(-0.4deg); box-shadow: 0 18px 36px rgba(61,87,115,0.18); }
+.torta-card .pallino {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-titoli);
+  color: #fff;
+  font-size: 1.1rem;
+}
+.torta-card h3 { font-family: var(--font-titoli); font-size: 1.1rem; color: var(--blu-scuro); margin-bottom: 8px; }
+.torta-card p { font-size: 0.9rem; color: var(--testo-chiaro); }
+
+.torte-showcase {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.torte-showcase img {
+  border-radius: var(--radius);
+  box-shadow: 0 16px 40px rgba(61,87,115,0.18);
+}
+
+/* Caffetteria & aperitivo */
+.caffetteria { background: var(--rosa-cipria); }
+.caffetteria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 44px;
+}
+.caffetteria-grid img {
+  border-radius: var(--radius);
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  box-shadow: 0 10px 26px rgba(61,87,115,0.15);
+  transition: transform .4s ease;
+}
+.caffetteria-grid img:hover { transform: translateY(-6px) scale(1.02); }
+.caffetteria-grid > *:first-child { grid-row: span 2; aspect-ratio: 3/5.2; }
+
+/* Banner panettoni stagionale */
+.banner-stagionale {
+  position: relative;
+  min-height: 46vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+.banner-stagionale img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.banner-stagionale::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(30,26,20,0.82) 10%, rgba(30,26,20,0.25) 75%);
+}
+.banner-stagionale-content { position: relative; z-index: 2; max-width: 460px; }
+.banner-stagionale .section-eyebrow { color: var(--crema); }
+.banner-stagionale h2 { font-family: var(--font-titoli); font-size: clamp(1.6rem, 3.6vw, 2.3rem); margin-bottom: 12px; }
+.banner-stagionale p { color: rgba(255,255,255,0.85); margin-bottom: 22px; }
+
+/* Responsive */
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+  .dove-siamo-grid { grid-template-columns: 1fr; }
+  .torte-showcase { grid-template-columns: 1fr; }
+  .caffetteria-grid { grid-template-columns: 1fr 1fr; }
+  .caffetteria-grid > *:first-child { grid-row: span 1; aspect-ratio: 3/4; grid-column: span 2; }
+}
+
+@media (max-width: 560px) {
+  .caffetteria-grid { grid-template-columns: 1fr; }
+  .caffetteria-grid > *:first-child { grid-column: span 1; }
+}
+
+/* ============================
+   Animazioni di sfondo — v2
+   ============================ */
+
+/* Bagliore da forno: due aloni caldi che respirano lentamente dietro
+   la sezione filosofia/ingredienti — richiama il calore della cottura. */
+.valori { position: relative; overflow: hidden; }
+.valori .forno-glow {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+.valori .forno-glow--1 {
+  width: 420px; height: 420px;
+  top: -140px; left: -120px;
+  background: radial-gradient(circle, rgba(224,134,47,0.28), transparent 70%);
+}
+.valori .forno-glow--2 {
+  width: 360px; height: 360px;
+  bottom: -160px; right: -100px;
+  background: radial-gradient(circle, rgba(111,143,179,0.24), transparent 70%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .valori .forno-glow--1 { animation: respiro-forno 10s ease-in-out infinite; }
+  .valori .forno-glow--2 { animation: respiro-forno 12s ease-in-out infinite reverse; animation-delay: -3s; }
+}
+@keyframes respiro-forno {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: .8; }
+  50% { transform: scale(1.18) translate(30px, 20px); opacity: 1; }
+}
+.valori .container { position: relative; z-index: 1; }
+
+/* Torte: stesso respiro, tono più tenue, per continuità visiva */
+#torte { position: relative; overflow: hidden; }
+#torte .forno-glow {
+  position: absolute; z-index: 0; border-radius: 50%; filter: blur(70px); pointer-events: none;
+  width: 380px; height: 380px; top: 20%; right: -140px;
+  background: radial-gradient(circle, rgba(201,83,107,0.18), transparent 70%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  #torte .forno-glow { animation: respiro-forno 14s ease-in-out infinite; animation-delay: -6s; }
+}
+#torte .container { position: relative; z-index: 1; }
+
+/* Vapore che sale sopra le foto caffetteria — pennellate morbide in salita */
+.caffetteria { position: relative; overflow: hidden; }
+.vapore-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.vapore {
+  position: absolute;
+  bottom: -10%;
+  width: 60px;
+  height: 140px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.55), transparent 72%);
+  filter: blur(6px);
+  opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .vapore { animation: sali-vapore 8s ease-in infinite; }
+}
+@keyframes sali-vapore {
+  0% { opacity: 0; transform: translateY(0) translateX(0) scaleX(1); }
+  15% { opacity: .5; }
+  70% { opacity: .28; }
+  100% { opacity: 0; transform: translateY(-380px) translateX(24px) scaleX(1.6); }
+}
+.caffetteria .container { position: relative; z-index: 1; }
+
+/* Recensioni: leggero riflesso "marmo" che attraversa le card al passaggio in vista */
+.recensione-card { position: relative; overflow: hidden; }
+.recensione-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -60%;
+  width: 40%; height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255,255,255,0.08), transparent);
+  transform: skewX(-18deg);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .recensione-card::before { animation: riflesso-marmo 6s ease-in-out infinite; }
+  .recensione-card:nth-child(2)::before { animation-delay: -2s; }
+  .recensione-card:nth-child(3)::before { animation-delay: -4s; }
+}
+@keyframes riflesso-marmo {
+  0%, 30% { left: -60%; }
+  70%, 100% { left: 130%; }
+}
+
+/* Panna montata spruzzata ai bordi — destra verso l'alto, sinistra verso il basso,
+   svanisce prima di ripartire (il "salto" del disegno avviene mentre è invisibile). */
+.panna-bordo {
+  position: fixed;
+  top: 0; bottom: 0;
+  width: 58px;
+  z-index: 150;
+  pointer-events: none;
+  overflow: hidden;
+}
+.panna-destra { right: 0; }
+.panna-sinistra { left: 0; }
+.panna-bordo svg { width: 100%; height: 100%; display: block; }
+
+.panna-bordo path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  opacity: 0;
+}
+.panna-bordo .panna-base {
+  stroke: #fbf3e3;
+  stroke-width: 26;
+  filter: drop-shadow(0 3px 5px rgba(61,87,115,0.22));
+}
+.panna-bordo .panna-luce {
+  stroke: #fffefb;
+  stroke-width: 11;
+}
+.sac-punta {
+  opacity: 0;
+  filter: drop-shadow(0 2px 3px rgba(61,87,115,0.28));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sac-punta { display: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* linear, non ease-in-out: deve avanzare a velocità costante come la bocchetta
+     (animateMotion in index.html), altrimenti la distanza punta↔fronte-panna varia nel ciclo */
+  .panna-destra path { animation: spruzza-panna 7s linear infinite; }
+  .panna-sinistra path { animation: spruzza-panna 7s linear infinite; animation-delay: 1.4s; }
+  .panna-bordo .panna-luce { animation-delay: .15s; }
+  .panna-sinistra .panna-luce { animation-delay: 1.55s; }
+}
+
+@keyframes spruzza-panna {
+  0%   { stroke-dashoffset: 1000; opacity: 0; }
+  10%  { opacity: .95; }
+  55%  { stroke-dashoffset: 0; opacity: .95; }
+  78%  { stroke-dashoffset: 0; opacity: .95; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+/* Non distrae dal contenuto su schermi stretti: si nasconde sotto i 1240px
+   (dove i bordi del viewport iniziano a sovrapporsi al contenuto centrale) */
+@media (max-width: 1240px) {
+  .panna-bordo { display: none; }
+}

@@ -1,0 +1,362 @@
+<!-- Durata: LEGATO-A:P03 -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golosa Alchimia — Bottega &amp; Osteria, Romano di Lombardia</title>
+<meta name="description" content="Golosa Alchimia — bottega gastronomica e osteria a Romano di Lombardia (BG). Formaggi e salumi d'eccellenza, cucina di bottega, riconoscimento Slow Food. Via G.B. Rubini 41.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="banner-poc">🔧 Sito dimostrativo (PoC) — non è il sito ufficiale di Golosa Alchimia</div>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#top" class="logo">
+      <span class="logo-badge">GA</span>
+      <span class="logo-testo">
+        <span class="logo-nome">Golosa Alchimia</span>
+        <span class="logo-sotto">Bottega &amp; Osteria · Romano di Lombardia</span>
+      </span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#bottega">La bottega</a></li>
+        <li><a href="#menu">Il menu</a></li>
+        <li><a href="#ambiente">L'ambiente</a></li>
+        <li><a href="#prenota" class="btn btn-primario btn-piccolo">Prenota un tavolo</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Apri menu">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="img/hero-osteria.jpg" alt="Interno dell'osteria Golosa Alchimia, tavoli circondati da bottiglie di vino" class="hero-bg" loading="eager">
+    <div class="container hero-inner">
+      <span class="hero-eyebrow">Bottega &amp; Osteria · Romano di Lombardia</span>
+      <h1>Il cibo nutre il corpo.<br><span>L'alchimia nutre l'anima.</span></h1>
+      <p class="sottotitolo">Una bottega gastronomica con l'anima di un'osteria: formaggi e salumi selezionati da tutta Italia, un tavolo tra gli scaffali, e la cucina di chi sceglie solo le cose buone.</p>
+      <div class="hero-azioni">
+        <a href="#prenota" class="btn btn-primario">Prenota un tavolo</a>
+        <a href="tel:+390363910410" class="btn btn-fantasma">📞 Chiama la bottega</a>
+      </div>
+      <p class="hero-note">Via G.B. Rubini 41, Romano di Lombardia (BG) — aperti dal mattino alla sera</p>
+    </div>
+  </section>
+
+  <!-- CHI SIAMO -->
+  <section class="sezione" id="chi-siamo">
+    <div class="container chisiamo-grid">
+      <div class="chisiamo-foto reveal">
+        <img src="img/bottega-formaggi.jpg" alt="Banco della bottega con formaggi stagionati e salumi">
+      </div>
+      <div class="chisiamo-testo reveal">
+        <span class="badge-anno">Riconosciuta da Slow Food Italia</span>
+        <h2>Un'osteria dentro una bottega</h2>
+        <p>Golosa Alchimia nasce dall'idea di Nicoletta e Mario di portare a Romano di Lombardia il meglio dell'enogastronomia italiana: formaggi e latticini bergamaschi selezionati con cura, insieme a salumi, paste, oli e altre eccellenze artigianali da tutta Italia, scelte "come si faceva una volta".</p>
+        <p>La bottega è riconosciuta da Slow Food Italia come "locale del buon formaggio". Accanto agli scaffali, poche tavole per un'osteria informale: chi entra per comprare può fermarsi anche a mangiare, circondato dalle stesse bottiglie e prodotti in vendita.</p>
+        <p style="font-size:0.82rem;color:var(--grigio-caldo)">Dati verificati online: nome dei titolari, riconoscimento Slow Food e descrizione dell'ambiente da articoli e recensioni pubbliche (il sito ufficiale non è più raggiungibile — vedi README). Nessun dato inventato.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA BOTTEGA -->
+  <section class="sezione sezione-alt" id="bottega">
+    <div class="container">
+      <div class="sezione-testata reveal">
+        <span class="eyebrow">La bottega</span>
+        <h2>Le eccellenze che selezioniamo</h2>
+        <p>Prodotti scelti uno a uno, con un occhio di riguardo per il territorio bergamasco. Le categorie tipiche di una bottega gastronomica: chiedi in negozio la disponibilità del momento.</p>
+      </div>
+      <div class="griglia griglia-3">
+        <div class="card card-prodotto reveal">
+          <span class="icona">🧀</span>
+          <h3>Formaggi &amp; latticini di Bergamo</h3>
+          <p>Selezione di formaggi e latticini del territorio bergamasco — il cuore della bottega, riconosciuto da Slow Food.</p>
+        </div>
+        <div class="card card-prodotto reveal">
+          <span class="icona">🥓</span>
+          <h3>Salumi d'Italia</h3>
+          <p>Salumi artigianali da diverse regioni italiane, tra cui specialità abruzzesi.</p>
+        </div>
+        <div class="card card-prodotto reveal">
+          <span class="icona">🍝</span>
+          <h3>Pasta &amp; conserve</h3>
+          <p>Paste artigianali, conserve e prodotti da forno di piccoli produttori italiani.</p>
+        </div>
+        <div class="card card-prodotto reveal">
+          <span class="icona">🫒</span>
+          <h3>Olio &amp; condimenti</h3>
+          <p>Oli extravergine e condimenti selezionati per completare la dispensa.</p>
+        </div>
+        <div class="card card-prodotto reveal">
+          <span class="icona">🍷</span>
+          <h3>Vino</h3>
+          <p>Bottiglie in vendita e in abbinamento ai piatti dell'osteria — ci si siede letteralmente in mezzo agli scaffali.</p>
+        </div>
+        <div class="card card-prodotto reveal">
+          <span class="icona">🎁</span>
+          <h3>Ceste regalo</h3>
+          <p>Composizioni personalizzabili per regali e occasioni, in più formati e fasce di prezzo <span style="color:var(--grigio-caldo)">[prezzo da confermare]</span>.</p>
+        </div>
+      </div>
+      <p class="galleria-nota">Categorie di prodotto ricostruite da articoli e recensioni pubbliche — l'assortimento reale in negozio può variare, da confermare in bottega.</p>
+    </div>
+  </section>
+
+  <!-- IL MENU -->
+  <section class="sezione" id="menu">
+    <div class="container">
+      <div class="sezione-testata reveal">
+        <span class="eyebrow">L'osteria</span>
+        <h2>Il menu</h2>
+        <p>Alcuni piatti trovati in recensioni e guide pubbliche — il menu di un'osteria di bottega cambia spesso in base a stagione e disponibilità. Nessun prezzo inventato: da confermare sempre in sede.</p>
+      </div>
+      <div class="menu-tabs" id="menuTabs">
+        <button class="menu-tab attivo" data-cat="taglieri">Taglieri &amp; Antipasti</button>
+        <button class="menu-tab" data-cat="primi">Primi</button>
+        <button class="menu-tab" data-cat="secondi">Secondi</button>
+        <button class="menu-tab" data-cat="dolci">Dolci</button>
+      </div>
+
+      <div class="menu-lista attivo" data-cat="taglieri">
+        <div class="menu-voce reveal">
+          <div class="menu-voce-nome">Tagliere di salumi abruzzesi e formaggi siciliani<span>con gelatina di zabaione e miele all'arancio</span></div>
+          <div class="menu-voce-prezzo">[prezzo da confermare]</div>
+        </div>
+        <div class="menu-voce reveal">
+          <div class="menu-voce-nome">Formagella Tremosine del Garda<span>all'aglio selvatico</span></div>
+          <div class="menu-voce-prezzo">[prezzo da confermare]</div>
+        </div>
+        <div class="menu-voce reveal">
+          <div class="menu-voce-nome">Piatto composto<span>selezione della bottega del giorno</span></div>
+          <div class="menu-voce-prezzo">[prezzo da confermare]</div>
+        </div>
+        <div class="menu-voce reveal">
+          <div class="menu-voce-nome">Tartare<span>anche nella versione al cioccolato</span></div>
+          <div class="menu-voce-prezzo">[prezzo da confermare]</div>
+        </div>
+      </div>
+
+      <div class="menu-lista" data-cat="primi">
+        <div class="menu-voce reveal">
+          <div class="menu-voce-nome">Gnocchi di zucca ai porcini<span>primo di stagione</span></div>
+          <div class="menu-voce-prezzo">[prezzo da confermare]</div>
+        </div>
+      </div>
+
+      <div class="menu-lista" data-cat="secondi">
+        <div class="menu-voce reveal">
+          <div class="menu-voce-nome">Bistecca "orecchie di elefante"<span>tagliata sottile, alla piastra</span></div>
+          <div class="menu-voce-prezzo">[prezzo da confermare]</div>
+        </div>
+        <div class="menu-voce reveal">
+          <div class="menu-voce-nome">Trippa<span>ricetta della casa</span></div>
+          <div class="menu-voce-prezzo">[prezzo da confermare]</div>
+        </div>
+      </div>
+
+      <div class="menu-lista" data-cat="dolci">
+        <div class="menu-voce reveal">
+          <div class="menu-voce-nome">Torta di mele<span>fatta in casa</span></div>
+          <div class="menu-voce-prezzo">[prezzo da confermare]</div>
+        </div>
+        <div class="menu-voce reveal">
+          <div class="menu-voce-nome">Biscotti<span>da forno artigianale</span></div>
+          <div class="menu-voce-prezzo">[prezzo da confermare]</div>
+        </div>
+      </div>
+
+      <p class="menu-nota">⏳ Piatti ricostruiti da recensioni pubbliche datate — il menu reale cambia ogni settimana in base a stagione e mercato. Nessun prezzo pubblicato: chiedere sempre conferma alla bottega.</p>
+    </div>
+  </section>
+
+  <!-- AMBIENTE / GALLERIA -->
+  <section class="sezione sezione-scura" id="ambiente">
+    <div class="container">
+      <div class="sezione-testata reveal">
+        <span class="eyebrow">L'ambiente</span>
+        <h2>Tra gli scaffali, a tavola</h2>
+        <p>Poche tavole circondate da bottiglie di vino e prodotti in vendita: un'atmosfera raccolta, curata, non caotica. Le immagini qui sotto sono ambientazioni generate con l'AI per mostrare lo stile della bottega — non sono foto reali dell'interno (vedi README).</p>
+      </div>
+      <div class="galleria-grid">
+        <div class="galleria-item reveal">
+          <img src="img/hero-osteria.jpg" alt="Sala dell'osteria con tavoli tra le bottiglie di vino">
+          <div class="cap">L'osteria tra le bottiglie</div>
+        </div>
+        <div class="galleria-item reveal">
+          <img src="img/bottega-formaggi.jpg" alt="Banco dei formaggi e salumi della bottega">
+          <div class="cap">Il banco della bottega</div>
+        </div>
+        <div class="galleria-item reveal">
+          <img src="img/tavola-imbandita.jpg" alt="Tavola imbandita con tagliere e calice di vino">
+          <div class="cap">Una tavola imbandita</div>
+        </div>
+        <div class="galleria-item reveal">
+          <img src="img/dettaglio-formaggio.jpg" alt="Dettaglio di formaggio con miele">
+          <div class="cap">Formaggio e miele</div>
+        </div>
+        <div class="galleria-item reveal">
+          <img src="img/ingresso-bottega.jpg" alt="Ingresso della bottega con ceste e conserve">
+          <div class="cap">L'ingresso della bottega</div>
+        </div>
+        <div class="galleria-item reveal" style="display:grid;place-items:center;background:rgba(246,236,218,0.06);">
+          <div style="text-align:center;padding:1.5rem;">
+            <span style="font-size:2.2rem;display:block;margin-bottom:0.6rem;">📸</span>
+            <p style="font-size:0.85rem;color:var(--crema-scura);">Foto vere della bottega<br>al prossimo aggiornamento</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOVE SIAMO / PRENOTA -->
+  <section class="sezione sezione-scura" id="prenota">
+    <div class="container">
+      <div class="sezione-testata reveal">
+        <span class="eyebrow">Dove siamo</span>
+        <h2>Prenota il tuo tavolo</h2>
+        <p>Rispondiamo al telefono o via email. Il modulo qui sotto è una demo: prima di un contatto reale, verificare i recapiti con la bottega.</p>
+      </div>
+      <div class="contatti-grid">
+        <div class="reveal">
+          <div class="info-riga">
+            <span class="icona">📍</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Via+G.B.+Rubini+41+Romano+di+Lombardia" target="_blank" rel="noopener">Via G.B. Rubini 41, Romano di Lombardia (BG)</a>
+              <span class="sotto">Indirizzo da fonti pubbliche online (dominio ufficiale offline) — riga #78 lista lead</span>
+            </div>
+          </div>
+          <div class="info-riga">
+            <span class="icona">📞</span>
+            <div>
+              <a href="tel:+390363910410">0363 910410</a>
+              <span class="sotto">Numero verificato dalla nostra lista lead</span>
+            </div>
+          </div>
+          <div class="info-riga">
+            <span class="icona">✉️</span>
+            <div>
+              <a href="mailto:info@golosalchimia.it">info@golosalchimia.it</a>
+              <span class="sotto">Email dalla lista lead</span>
+            </div>
+          </div>
+          <div class="info-riga">
+            <span class="icona">📷</span>
+            <div>
+              <a href="https://www.instagram.com/golosalchimia/" target="_blank" rel="noopener">@golosalchimia</a>
+              <span class="sotto">Instagram — trovato online, non ispezionato visivamente in questa sessione (vedi README)</span>
+            </div>
+          </div>
+          <div class="info-riga" style="align-items:flex-start;">
+            <span class="icona">🕒</span>
+            <div>
+              <table class="tabella-orari">
+                <tr><td>Bottega</td><td>orari da confermare</td></tr>
+                <tr><td>Osteria</td><td>pranzo · su richiesta</td></tr>
+              </table>
+              <span class="sotto">⏳ Orari non trovati in fonti pubbliche affidabili, da confermare con la bottega</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <form class="form-card" id="formPrenota">
+            <div class="fila-2">
+              <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+              </div>
+              <div class="campo">
+                <label for="contatto">Telefono o email</label>
+                <input type="text" id="contatto" name="contatto" required>
+              </div>
+            </div>
+            <div class="fila-2">
+              <div class="campo">
+                <label for="data">Data</label>
+                <input type="date" id="data" name="data" required>
+              </div>
+              <div class="campo">
+                <label for="persone">Numero persone</label>
+                <input type="number" id="persone" name="persone" min="1" max="20" value="2" required>
+              </div>
+            </div>
+            <div class="campo">
+              <label>Occasione <span class="facoltativo">(facoltativo)</span></label>
+              <div class="chips" id="chipsOccasione">
+                <button type="button" class="chip" data-val="Pranzo di lavoro">Pranzo di lavoro</button>
+                <button type="button" class="chip" data-val="Cena tra amici">Cena tra amici</button>
+                <button type="button" class="chip" data-val="Degustazione">Degustazione</button>
+                <button type="button" class="chip" data-val="Occasione speciale">Occasione speciale</button>
+              </div>
+            </div>
+            <div class="campo">
+              <label for="note">Note <span class="facoltativo">(facoltativo)</span></label>
+              <textarea id="note" name="note" placeholder="Allergie, intolleranze, richieste particolari…"></textarea>
+            </div>
+            <label class="nota-privacy">
+              <input type="checkbox" id="privacyCheck" required>
+              <span>Ho letto la <a href="privacy.html">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato/a.</span>
+            </label>
+            <button type="submit" class="btn btn-primario" style="width:100%;margin-top:1.3rem;">Invia richiesta di prenotazione</button>
+            <p style="font-size:0.78rem;color:var(--grigio-caldo);margin-top:0.9rem;">Demo: il modulo non invia dati reali (nessun backend collegato in questo PoC).</p>
+          </form>
+          <div class="conferma-invio" id="confermaInvio">
+            <div class="spunta">✓</div>
+            <h3 style="font-size:1.4rem;color:var(--carta);">Richiesta inviata (demo)</h3>
+            <p style="color:var(--crema-scura);">In un sito reale, la bottega riceverebbe la richiesta e confermerebbe il tavolo per telefono o email.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Golosa Alchimia</h4>
+      <p style="max-width:26em;color:var(--grigio-caldo);">Bottega &amp; Osteria a Romano di Lombardia. Sito dimostrativo (PoC) prodotto per mostrare cosa potrebbe essere un sito nuovo — non è online ufficialmente collegato all'attività.</p>
+    </div>
+    <div>
+      <h4>Link</h4>
+      <ul>
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#bottega">La bottega</a></li>
+        <li><a href="#menu">Il menu</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contatti</h4>
+      <ul>
+        <li><a href="tel:+390363910410">0363 910410</a></li>
+        <li><a href="mailto:info@golosalchimia.it">info@golosalchimia.it</a></li>
+        <li>Via G.B. Rubini 41, Romano di Lombardia</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Golosa Alchimia — PoC realizzato da P03 (progetto interno)</span>
+    <span>Non è il sito ufficiale</span>
+  </div>
+</footer>
+
+<a href="tel:+390363910410" class="btn btn-primario cta-mobile">📞 Chiama</a>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

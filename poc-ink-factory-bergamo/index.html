@@ -1,0 +1,410 @@
+<!-- Durata: LEGATO-A:P03 -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ink Factory Bergamo — Tattoo &amp; Piercing Studio</title>
+<meta name="description" content="Ink Factory Bergamo — tattoo studio dal 2014 in Via San Bernardino, Bergamo. Tatuaggi, piercing, cover-up. Consulenza gratuita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://lh3.googleusercontent.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="banner-poc">🔧 Sito dimostrativo (PoC) — non è il sito ufficiale di Ink Factory Bergamo</div>
+
+<div class="cursore-custom" id="cursoreCustom" aria-hidden="true"></div>
+
+<header class="topbar" id="topbar">
+  <div class="container topbar-inner">
+    <a href="#top" class="logo">
+      <span class="logo-badge">IF</span>
+      <span class="logo-testo">
+        <span class="logo-nome">Ink Factory</span>
+        <span class="logo-sotto">Tattoo &amp; Piercing · Bergamo</span>
+      </span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#stili">Cosa facciamo</a></li>
+        <li><a href="#studio">Lo studio</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#artisti">Artisti</a></li>
+        <li><a href="#contatti" class="btn btn-primario btn-piccolo">Contattaci</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Apri menu">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-slider" id="heroSlider">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmIzKZ5Ive0YxhOU_0FTTwVWK3lI1uMzkX557wwaiEbzTU90x9syORa4IkgLKJm3CgssG8TKycsGOrc7PMCgxFOBaLtwELuDScZJues2y0PqIG-vN2xcnZaSPbKbOD4ZqRnVlH_nbAAujr9=w1200" alt="Reception di Ink Factory Bergamo con rosa disegnata a gesso sulla porta d'ingresso" class="hero-bg attiva" loading="eager">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkjAiao92Swp0oGwPau9uOIp74DApRDCsRd3491L9Pkn3IB4848SflzlVP2hmdVXTT0yrnmL73kujvTzrHx4nTrb04CRX91GGxgbhfT7-ij2jttX2OebmPUwvOH41H3mH6KWjEZ8_-qBZSR=w1200" alt="Angolo relax dello studio con flash art e decorazioni" class="hero-bg" loading="lazy">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmrXJuvMYORAUIw4AVNYDYmwHQloogF9NUXY_Uyniy02bLNtiSzSSckp0h7a7CB0ROnwjf5IjOfO_HMNCtTeUhiifaKR0GEYMkM98XT0tqdGqQynIIYvGbxke9Ya_LzonTxV0eegg=w1200" alt="Sala trattamento con specchio ornamentale e lampada" class="hero-bg" loading="lazy">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWms5g5NKwug2G--qBiPKmmcxbwUfgSnyf2a7_W6p_kc1jcRSrVmUiLmgEVMqFMN_5_DLTiJ0ZdDX8DBX2XHjp4LgZ7XI3A1GitRYSjNz0EVKZvixekgt02WwH9_tn0M_CdNWRVRvLJ4PSfW=w1200" alt="Postazione disegno con muro di flash art e libreria" class="hero-bg" loading="lazy">
+    </div>
+    <svg class="ago-svg" viewBox="0 0 560 160" aria-hidden="true">
+      <path d="M10,80 C 60,10 120,150 180,60 C 240,-20 300,140 360,70 C 420,10 480,120 540,50" fill="none" stroke="var(--ambra)" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+    <canvas class="particelle-canvas" id="particelle" aria-hidden="true"></canvas>
+    <div class="container hero-inner">
+      <span class="hero-eyebrow">Tattoo studio · Bergamo dal 2014</span>
+      <h1>L'inchiostro è un mestiere,<br><span>non un caso.</span></h1>
+      <p class="sottotitolo">Ink Factory è uno studio di tatuaggi e piercing in Via San Bernardino a Bergamo, aperto nel 2014. Consulenza gratuita, materiali monouso certificati, ogni progetto disegnato su misura.</p>
+      <div class="hero-azioni">
+        <a href="#contatti" class="btn btn-primario">Richiedi una consulenza</a>
+        <a href="https://wa.me/393934343006" target="_blank" rel="noopener" class="btn btn-fantasma">📱 Scrivici su WhatsApp</a>
+      </div>
+      <p class="hero-note">Via San Bernardino 109, 24126 Bergamo — su appuntamento</p>
+    </div>
+    <div class="hero-slider-dots" id="heroDots" aria-hidden="true">
+      <span class="dot attivo"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  </section>
+
+  <div class="divisore reveal-drip" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="divisore-svg"><path d="M0,20 Q150,58 300,26 T600,30 T900,14 T1200,26 L1200,60 L0,60 Z"/></svg></div>
+
+  <!-- CHI SIAMO -->
+  <section class="sezione" id="chi-siamo">
+    <div class="container chisiamo-grid">
+      <div class="chisiamo-foto reveal">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn96R0wrazAzoRDpk8tS_YGIdpHO4YKkpL8pvW7kWwCTTs3BeegX2ralv6R_HeuhbbRMwKZBw2ORWhmUv9LVz8tzhZNDceGWXmJ1fUeAQogChBNulz7gRpsJ2rRjEk0E7pXvbPqHh5tzrQ=w1200" alt="Corridoio interno con postazioni di lavoro e parete decorativa in pietra" loading="lazy">
+      </div>
+      <div class="chisiamo-testo reveal">
+        <span class="badge-anno">Dal 2014 · Bergamo</span>
+        <h2 class="titolo-inciso">Uno studio, tanta esperienza</h2>
+        <p>Ink Factory nasce a marzo 2014 in Via San Bernardino a Bergamo. Uno studio di tatuaggi e piercing con più artisti resident, ognuno con il proprio stile, che condividono lo stesso spazio e la stessa attenzione a igiene e materiali.</p>
+        <p>Ogni tatuaggio parte da un colloquio: si parla dell'idea, della zona del corpo, delle dimensioni, e si arriva insieme a un disegno pensato per durare bene nel tempo.</p>
+        <p style="font-size:0.82rem;color:var(--grigio)">Dati verificati: anno di apertura e indirizzo da fonti pubbliche online (directory di settore + cache motori di ricerca, il sito ufficiale non è più raggiungibile — vedi README). Foto reale pubblica da Google Maps.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divisore reveal-drip" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="divisore-svg"><path d="M0,26 Q150,-4 300,22 T600,18 T900,30 T1200,20 L1200,60 L0,60 Z"/></svg></div>
+
+  <!-- COSA FACCIAMO / STILI -->
+  <section class="sezione sezione-alt" id="stili">
+    <div class="container">
+      <div class="sezione-testata reveal">
+        <span class="eyebrow">Servizi</span>
+        <h2 class="titolo-inciso">Cosa facciamo</h2>
+        <p>Le categorie tipiche di uno studio di tatuaggi multi-artista. Per stili e disponibilità specifiche, chiedi in consulenza: ogni artista ha le proprie specializzazioni.</p>
+      </div>
+      <div class="griglia griglia-3">
+        <div class="card card-stile reveal" style="--i:0">
+          <span class="icona">🖤</span>
+          <h3>Blackwork &amp; Linework</h3>
+          <p>Tratti pieni, geometrie, linee sottili (fine line). Disegni puliti pensati per invecchiare bene.</p>
+        </div>
+        <div class="card card-stile reveal" style="--i:1">
+          <span class="icona">🎨</span>
+          <h3>Realistico &amp; Colore</h3>
+          <p>Ritratti, soggetti realistici, lavori a colore su composizioni più ampie.</p>
+        </div>
+        <div class="card card-stile reveal" style="--i:2">
+          <span class="icona">⚓</span>
+          <h3>Old School / Traditional</h3>
+          <p>Il classico tratto marcato e i colori decisi della tradizione tattoo.</p>
+        </div>
+        <div class="card card-stile reveal" style="--i:3">
+          <span class="icona">🔁</span>
+          <h3>Cover-up</h3>
+          <p>Copertura o rielaborazione di tatuaggi esistenti: si valuta insieme la fattibilità in consulenza.</p>
+        </div>
+        <div class="card card-stile reveal" style="--i:4">
+          <span class="icona">💎</span>
+          <h3>Piercing</h3>
+          <p>Piercing con aghi monouso certificati, materiali ipoallergenici.</p>
+        </div>
+        <div class="card card-stile reveal" style="--i:5">
+          <span class="icona">💬</span>
+          <h3>Consulenza gratuita</h3>
+          <p>Prima di ogni lavoro, un colloquio senza impegno per definire idea, zona e preventivo.</p>
+        </div>
+      </div>
+      <p class="galleria-nota">Nessun listino prezzi pubblico disponibile: il preventivo si fa in consulenza, caso per caso (dipende da dimensioni, dettaglio e artista).</p>
+    </div>
+  </section>
+
+  <div class="divisore reveal-drip" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="divisore-svg"><path d="M0,20 Q150,58 300,26 T600,30 T900,14 T1200,26 L1200,60 L0,60 Z"/></svg></div>
+
+  <!-- STUDIO / ATMOSFERA -->
+  <section class="sezione" id="studio">
+    <div class="container">
+      <div class="sezione-testata reveal">
+        <span class="eyebrow">Lo studio</span>
+        <h2 class="titolo-inciso">Dentro Ink Factory</h2>
+        <p>Uno spazio industrial, mattoni a vista e luce calda. Le immagini qui sotto sono <strong>foto reali pubbliche</strong> dello studio (da Google Maps) — per le ambientazioni generate con AI vedi la sezione Gallery più sotto.</p>
+      </div>
+      <div class="galleria-grid galleria-asimmetrica">
+        <div class="galleria-item g-grande reveal lightbox-apri" style="--i:0" data-full="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmIzKZ5Ive0YxhOU_0FTTwVWK3lI1uMzkX557wwaiEbzTU90x9syORa4IkgLKJm3CgssG8TKycsGOrc7PMCgxFOBaLtwELuDScZJues2y0PqIG-vN2xcnZaSPbKbOD4ZqRnVlH_nbAAujr9=w1600" data-cap="Ingresso e reception">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmIzKZ5Ive0YxhOU_0FTTwVWK3lI1uMzkX557wwaiEbzTU90x9syORa4IkgLKJm3CgssG8TKycsGOrc7PMCgxFOBaLtwELuDScZJues2y0PqIG-vN2xcnZaSPbKbOD4ZqRnVlH_nbAAujr9=w1200" alt="Reception con porta decorata a gesso e tavolo in legno" loading="lazy">
+          <div class="cap">Ingresso e reception</div>
+        </div>
+        <div class="galleria-item g-largo reveal lightbox-apri" style="--i:1" data-full="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn96R0wrazAzoRDpk8tS_YGIdpHO4YKkpL8pvW7kWwCTTs3BeegX2ralv6R_HeuhbbRMwKZBw2ORWhmUv9LVz8tzhZNDceGWXmJ1fUeAQogChBNulz7gRpsJ2rRjEk0E7pXvbPqHh5tzrQ=w1600" data-cap="Il corridoio delle postazioni">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn96R0wrazAzoRDpk8tS_YGIdpHO4YKkpL8pvW7kWwCTTs3BeegX2ralv6R_HeuhbbRMwKZBw2ORWhmUv9LVz8tzhZNDceGWXmJ1fUeAQogChBNulz7gRpsJ2rRjEk0E7pXvbPqHh5tzrQ=w1200" alt="Corridoio con postazioni di lavoro e parete in pietra decorativa" loading="lazy">
+          <div class="cap">Il corridoio delle postazioni</div>
+        </div>
+        <div class="galleria-item reveal lightbox-apri" style="--i:2" data-full="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWms5g5NKwug2G--qBiPKmmcxbwUfgSnyf2a7_W6p_kc1jcRSrVmUiLmgEVMqFMN_5_DLTiJ0ZdDX8DBX2XHjp4LgZ7XI3A1GitRYSjNz0EVKZvixekgt02WwH9_tn0M_CdNWRVRvLJ4PSfW=w1600" data-cap="La zona disegno">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWms5g5NKwug2G--qBiPKmmcxbwUfgSnyf2a7_W6p_kc1jcRSrVmUiLmgEVMqFMN_5_DLTiJ0ZdDX8DBX2XHjp4LgZ7XI3A1GitRYSjNz0EVKZvixekgt02WwH9_tn0M_CdNWRVRvLJ4PSfW=w1200" alt="Scrivania con muro di flash art e libreria" loading="lazy">
+          <div class="cap">La zona disegno</div>
+        </div>
+        <div class="galleria-item reveal lightbox-apri" style="--i:3" data-full="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmrXJuvMYORAUIw4AVNYDYmwHQloogF9NUXY_Uyniy02bLNtiSzSSckp0h7a7CB0ROnwjf5IjOfO_HMNCtTeUhiifaKR0GEYMkM98XT0tqdGqQynIIYvGbxke9Ya_LzonTxV0eegg=w1600" data-cap="Sala trattamento">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmrXJuvMYORAUIw4AVNYDYmwHQloogF9NUXY_Uyniy02bLNtiSzSSckp0h7a7CB0ROnwjf5IjOfO_HMNCtTeUhiifaKR0GEYMkM98XT0tqdGqQynIIYvGbxke9Ya_LzonTxV0eegg=w1200" alt="Sala trattamento con specchio ornamentale e lampada da lavoro" loading="lazy">
+          <div class="cap">Sala trattamento</div>
+        </div>
+      </div>
+      <p class="galleria-nota">Foto pubbliche dalla scheda Google Maps dello studio (2026-07). Nessuna immagine ritocca o nasconde marchi/persone terze.</p>
+    </div>
+  </section>
+
+  <div class="divisore reveal-drip" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="divisore-svg"><path d="M0,26 Q150,-4 300,22 T600,18 T900,30 T1200,20 L1200,60 L0,60 Z"/></svg></div>
+
+  <!-- GALLERY / VISIONI AI -->
+  <section class="sezione sezione-alt" id="gallery">
+    <div class="container">
+      <div class="sezione-testata reveal">
+        <span class="eyebrow">Atmosfera</span>
+        <h2 class="titolo-inciso">Visioni Ink Factory</h2>
+        <p>Ambientazioni ispirate allo studio, <strong>generate con intelligenza artificiale</strong> — non sono foto reali (per quelle vedi "Lo studio" qui sopra). Un'atmosfera in più, non un sostituto della realtà.</p>
+      </div>
+      <div class="masonry-grid">
+        <div class="masonry-item reveal lightbox-apri" style="--i:0" data-full="img/hero-studio.jpg" data-cap="Vista d'insieme dello studio (ambientazione AI)">
+          <img src="img/hero-studio.jpg" alt="Vista d'insieme dello studio, ambientazione generata con AI" loading="lazy">
+          <div class="masonry-cap">Vista d'insieme <span>AI</span></div>
+        </div>
+        <div class="masonry-item reveal lightbox-apri" style="--i:1" data-full="img/workspace-closeup.jpg" data-cap="Postazione di lavoro (ambientazione AI)">
+          <img src="img/workspace-closeup.jpg" alt="Postazione di lavoro con macchinetta e materiali, ambientazione generata con AI" loading="lazy">
+          <div class="masonry-cap">Postazione di lavoro <span>AI</span></div>
+        </div>
+        <div class="masonry-item reveal lightbox-apri" style="--i:2" data-full="img/flash-wall.jpg" data-cap="Il muro dei disegni (ambientazione AI)">
+          <img src="img/flash-wall.jpg" alt="Muro con disegni e schizzi appesi, ambientazione generata con AI" loading="lazy">
+          <div class="masonry-cap">Il muro dei disegni <span>AI</span></div>
+        </div>
+        <div class="masonry-item reveal lightbox-apri" style="--i:3" data-full="img/reception.jpg" data-cap="Area accoglienza (ambientazione AI)">
+          <img src="img/reception.jpg" alt="Area accoglienza dello studio, ambientazione generata con AI" loading="lazy">
+          <div class="masonry-cap">Area accoglienza <span>AI</span></div>
+        </div>
+        <div class="masonry-item reveal lightbox-apri" style="--i:4" data-full="img/ink-bottles.jpg" data-cap="I colori dell'inchiostro (ambientazione AI)">
+          <img src="img/ink-bottles.jpg" alt="Boccette di inchiostro per tatuaggi, ambientazione generata con AI" loading="lazy">
+          <div class="masonry-cap">I colori dell'inchiostro <span>AI</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divisore reveal-drip" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="divisore-svg"><path d="M0,20 Q150,58 300,26 T600,30 T900,14 T1200,26 L1200,60 L0,60 Z"/></svg></div>
+
+  <!-- ARTISTI -->
+  <section class="sezione sezione-scura" id="artisti">
+    <div class="container">
+      <div class="sezione-testata reveal">
+        <span class="eyebrow">Il team</span>
+        <h2 class="titolo-inciso">Gli artisti resident</h2>
+        <p>Nomi e handle trovati sui canali pubblici dello studio — nessun dato inventato. Specializzazioni e disponibilità: da confermare in consulenza.</p>
+      </div>
+      <div class="griglia griglia-4">
+        <div class="card card-artista reveal" style="--i:0">
+          <div class="avatar-wrap"><div class="avatar">AD</div></div>
+          <h3>Achille De Maria</h3>
+          <p class="ruolo">Fondatore · Tatuatore</p>
+          <a href="https://www.instagram.com/achille_de_maria/" target="_blank" rel="noopener" class="handle">@achille_de_maria</a>
+        </div>
+        <div class="card card-artista reveal" style="--i:1">
+          <div class="avatar-wrap"><div class="avatar">FC</div></div>
+          <h3>Francesca Cavagna</h3>
+          <p class="ruolo">Tatuatrice resident</p>
+          <a href="https://www.instagram.com/francescacavagna.tattoo/" target="_blank" rel="noopener" class="handle">@francescacavagna.tattoo</a>
+        </div>
+        <div class="card card-artista reveal" style="--i:2">
+          <div class="avatar-wrap"><div class="avatar">LS</div></div>
+          <h3>Lipstickssteven</h3>
+          <p class="ruolo">Tatuatore resident</p>
+          <a href="https://www.instagram.com/lipstickssteven/" target="_blank" rel="noopener" class="handle">@lipstickssteven</a>
+        </div>
+        <div class="card card-artista reveal" style="--i:3">
+          <div class="avatar-wrap"><div class="avatar">BP</div></div>
+          <h3>Bigptattz</h3>
+          <p class="ruolo">Tatuatore resident</p>
+          <a href="https://www.instagram.com/bigptattz/" target="_blank" rel="noopener" class="handle">@bigptattz</a>
+        </div>
+      </div>
+
+      <div class="lavori-reali reveal">
+        <p class="lavori-nota">Alcuni lavori realizzati in studio — foto pubbliche, nessun dato inventato. Dove il post originale riportava un credito, lo manteniamo:</p>
+        <div class="lavori-grid">
+          <a class="lavoro-item" style="--i:0" href="https://www.instagram.com/ink_factory_tattooshop_/" target="_blank" rel="noopener">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkVfFzjyZjUzITFV7mUadCI3hB1zdOaIauOa2A98JCJ_u1WLbRkZRIXwlh2IiulfE7PLQmxN26nmnSJBwV13d9Zccf-66oiPDmxMp4-FG1NnmeY5eknnoNRlBO5dE5ljAXwMGo=w800" alt="Tatuaggio realistico a teschio, lavoro realizzato in studio" loading="lazy">
+            <span class="lavoro-cap">Lavoro realizzato in studio</span>
+          </a>
+          <a class="lavoro-item" style="--i:1" href="https://www.instagram.com/ink_factory_tattooshop_/" target="_blank" rel="noopener">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWniGSTJmM9k3QhKvVK2adsdf6UhLNELkxTKWDfVmZZTrQgv5Ht-tJd9G2D32COtnOUwOdEXmdNsYINvFSMXsId35h6J_rm97aKWHEymeLlShXADtRm2sMKFowFr_-v2Z76LK7HJ=w800" alt="Tatuaggio old school a testa di gallo colorata, lavoro realizzato in studio" loading="lazy">
+            <span class="lavoro-cap">Lavoro realizzato in studio</span>
+          </a>
+          <a class="lavoro-item" style="--i:2" href="https://www.instagram.com/francescacavagna.tattoo/" target="_blank" rel="noopener">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlAeg35fiC6aLDIWAMqTlbnM2tFW_TT3Ns3u7kX63IrpXVkttAX9PmzV03OmblPedtGOF79SdYqXfMjSxEW8b4D25SVMfEQIBPQyA47fyoT4PUGTovi_NuWU4n_LIM2LYvgpOztOPLUdlST=w800" alt="Tatuaggio blackwork di un'anfora con fiori, lavoro di Francesca Cavagna" loading="lazy">
+            <span class="lavoro-cap">@francescacavagna.tattoo</span>
+          </a>
+          <a class="lavoro-item" style="--i:3" href="https://www.instagram.com/francescacavagna.tattoo/" target="_blank" rel="noopener">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmolWiGwe7AZdqRngUHiX_i11p_A50d5Eu3K7DZVSUthx7cnPId2VUQxqa1gNCdd7JmDazYNlq10ajJ8n_6ghjPT9q0WwyUCELLa0z_2bQIe1uFJry1EPiHlsJwaJRmy3vU9FAGfQVAwQBq=w800" alt="Tatuaggio realistico ritratto di cherubino, lavoro di Francesca Cavagna" loading="lazy">
+            <span class="lavoro-cap">@francescacavagna.tattoo</span>
+          </a>
+          <a class="lavoro-item" style="--i:4" href="https://www.instagram.com/francescacavagna.tattoo/" target="_blank" rel="noopener">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnbk8Znb-wTrwVMujm046d4YS-mCC34VXMg5ooSOWUNMOj0V2XE2XwoeWjHI93atL_88tqw7M1JH9dj0g4R9c7tlStSfyTo1fXS3hW3qBR-vYHVlpn7Z8S_FIpI7t79UkzT-ChuJOiu7_JJ=w800" alt="Tatuaggio in corsivo 'Empathy' sull'avambraccio, lavoro di Francesca Cavagna" loading="lazy">
+            <span class="lavoro-cap">@francescacavagna.tattoo</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divisore reveal-drip" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="divisore-svg"><path d="M0,26 Q150,-4 300,22 T600,18 T900,30 T1200,20 L1200,60 L0,60 Z"/></svg></div>
+
+  <!-- CONTATTI -->
+  <section class="sezione" id="contatti">
+    <div class="container">
+      <div class="sezione-testata reveal">
+        <span class="eyebrow">Contatti</span>
+        <h2 class="titolo-inciso">Parliamo del tuo tatuaggio</h2>
+        <p>Rispondiamo su WhatsApp, telefono o con il modulo qui sotto. Prima consulenza sempre gratuita.</p>
+      </div>
+      <div class="contatti-grid">
+        <div class="reveal">
+          <div class="info-riga">
+            <span class="icona">📍</span>
+            <div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Via+San+Bernardino+109+24126+Bergamo" target="_blank" rel="noopener">Via San Bernardino 109, 24126 Bergamo</a>
+              <span class="sotto">Indirizzo da fonti pubbliche online (dominio ufficiale offline)</span>
+            </div>
+          </div>
+          <div class="info-riga">
+            <span class="icona">📞</span>
+            <div>
+              <a href="tel:+393934343006">393 434 3006</a>
+              <span class="sotto">Numero dalla nostra lista lead — verificare prima del contatto reale (vedi README)</span>
+            </div>
+          </div>
+          <div class="info-riga">
+            <span class="icona">📱</span>
+            <div>
+              <a href="https://wa.me/393934343006" target="_blank" rel="noopener">Scrivi su WhatsApp</a>
+              <span class="sotto">Il canale più veloce per una prima idea</span>
+            </div>
+          </div>
+          <div class="info-riga">
+            <span class="icona">📷</span>
+            <div>
+              <a href="https://www.instagram.com/ink_factory_tattooshop_/" target="_blank" rel="noopener">@ink_factory_tattooshop_</a>
+              <span class="sotto">Instagram — lavori e resident artist</span>
+            </div>
+          </div>
+          <div class="info-riga" style="align-items:flex-start;">
+            <span class="icona">🕒</span>
+            <div>
+              <table class="tabella-orari">
+                <tr><td>Lun–Sab</td><td>10:30–13:00 · 14:30–19:30</td></tr>
+                <tr><td>Domenica</td><td>Chiuso</td></tr>
+              </table>
+              <span class="sotto">⏳ Orari da fonte online, da riconfermare</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <form class="form-card" id="formContatto">
+            <div class="fila-2">
+              <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+              </div>
+              <div class="campo">
+                <label for="contatto">Telefono o email</label>
+                <input type="text" id="contatto" name="contatto" required>
+              </div>
+            </div>
+            <div class="campo">
+              <label>Zona del corpo <span class="facoltativo">(facoltativo)</span></label>
+              <div class="chips" id="chipsZona">
+                <button type="button" class="chip" data-val="Braccio">Braccio</button>
+                <button type="button" class="chip" data-val="Gamba">Gamba</button>
+                <button type="button" class="chip" data-val="Schiena">Schiena</button>
+                <button type="button" class="chip" data-val="Torace">Torace</button>
+                <button type="button" class="chip" data-val="Mano/piede">Mano/piede</button>
+                <button type="button" class="chip" data-val="Altro">Altro</button>
+              </div>
+            </div>
+            <div class="campo">
+              <label for="idea">Racconta la tua idea</label>
+              <textarea id="idea" name="idea" placeholder="Stile, dimensioni indicative, riferimenti…"></textarea>
+            </div>
+            <label class="nota-privacy">
+              <input type="checkbox" id="privacyCheck" required>
+              <span>Ho letto la <a href="privacy.html">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato/a.</span>
+            </label>
+            <button type="submit" class="btn btn-primario" style="width:100%;margin-top:1.3rem;">Invia richiesta</button>
+            <p style="font-size:0.78rem;color:var(--grigio);margin-top:0.9rem;">Demo: il modulo non invia dati reali (nessun backend collegato in questo PoC).</p>
+          </form>
+          <div class="conferma-invio" id="confermaInvio">
+            <div class="spunta">✓</div>
+            <h3 style="font-size:1.4rem;">Richiesta inviata (demo)</h3>
+            <p style="color:var(--panna-scura);">In un sito reale, qui lo studio riceverebbe la richiesta e ricontatterebbe entro 24-48h.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Ink Factory</h4>
+      <p style="max-width:26em;color:var(--grigio);">Tattoo &amp; piercing studio a Bergamo dal 2014. Sito dimostrativo (PoC) prodotto per mostrare cosa potrebbe essere un sito nuovo — non è online ufficialmente collegato allo studio.</p>
+    </div>
+    <div>
+      <h4>Link</h4>
+      <ul>
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#stili">Cosa facciamo</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#artisti">Artisti</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contatti</h4>
+      <ul>
+        <li><a href="tel:+393934343006">393 434 3006</a></li>
+        <li><a href="https://www.instagram.com/ink_factory_tattooshop_/" target="_blank" rel="noopener">Instagram</a></li>
+        <li>Via San Bernardino 109, Bergamo</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Ink Factory Bergamo — PoC realizzato da P03 (progetto interno)</span>
+    <span>Non è il sito ufficiale</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/393934343006" target="_blank" rel="noopener" class="btn btn-primario cta-mobile">📱 WhatsApp</a>
+<button class="back-to-top" id="backToTop" aria-label="Torna su">↑</button>
+<div class="toast" id="toast"></div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-chiudi" id="lightboxChiudi" aria-label="Chiudi">✕</button>
+  <img src="" alt="" id="lightboxImg">
+  <p class="lightbox-cap" id="lightboxCap"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

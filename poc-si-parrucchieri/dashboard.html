@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- Durata: LEGATO-A:P03 -->
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Area salone — Prenotazioni | SI Parrucchieri Treviglio</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%231e3d2e'/><text x='50' y='66' font-size='46' text-anchor='middle' fill='%23faf7f0' font-family='Georgia'>SI</text></svg>" />
+</head>
+<body class="pagina-dash">
+
+  <div class="banner-poc">AREA RISERVATA AL SALONE — demo dimostrativa</div>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-badge">SI</span>
+        <span class="logo-testo">
+          <span class="logo-nome">SI Parrucchieri</span>
+          <span class="logo-sotto">Area salone</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">← Vai al sito</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container dash-wrap">
+    <div class="dash-testata">
+      <div>
+        <h1>Prenotazioni ricevute</h1>
+        <p class="sotto">Tutto ciò che i clienti hanno prenotato dal sito e da Instagram, con preferenze e foto.</p>
+      </div>
+      <button class="btn btn-fantasma btn-piccolo" id="btn-demo">+ Genera 3 prenotazioni di esempio</button>
+    </div>
+
+    <div class="stat-row" id="stat-row"></div>
+
+    <div class="filtri" id="filtri"></div>
+
+    <div class="pren-lista" id="pren-lista"></div>
+  </main>
+
+  <div class="lightbox" id="lightbox"><img src="" alt="Foto di ispirazione ingrandita" /></div>
+  <div class="toast" id="toast"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

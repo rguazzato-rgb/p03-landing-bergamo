@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!-- Durata: LEGATO-A:P03 -->
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzeria Il Girasole - Tradizione Napoletana nel Cuore della Città</title>
+  <meta name="description" content="Dal 1984 portiamo la vera pizza sulla vostra tavola con passione e dedizione. Ingredienti selezionati, impasti fragranti e la stessa passione di sempre.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVIGATION HEADER
+       ========================================================================== */ -->
+  <header class="header-nav" id="main-header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo-link" id="logo">
+        <img src="logo-girasole.svg" alt="Logo Pizzeria Il Girasole" class="logo-img">
+        <span class="logo-text">Pizzeria Il Girasole</span>
+      </a>
+
+      <!-- Menu links -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="chi-siamo.html" class="nav-link">Chi Siamo</a>
+        <a href="ordina.html" class="nav-link">Ordina</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <a href="tel:035620828" class="btn-header-call"><i class="fa-solid fa-phone" style="margin-right: 6px;"></i> Chiamaci</a>
+        <button class="btn-mobile-toggle" id="mobile-toggle" aria-label="Apri menu">
+          <i class="fa-solid fa-bars" id="toggle-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== */ -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <h1 class="headline-xl">Una storia che profuma di pizza da oltre 30 anni</h1>
+      <p class="body-lg">Prepariamo pizze con ingredienti selezionati, impasti fragranti e la stessa passione che ci accompagna dal primo giorno</p>
+      <a href="menu.html" class="btn-primary">VEDI IL MENU</a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROMO BANNER
+       ========================================================================== */ -->
+  <section class="promo-section">
+    <div class="container">
+      <div class="promo-grid">
+        <!-- Promo 1 -->
+        <div class="promo-card">
+          <div class="promo-icon-container">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div class="promo-content">
+            <h4>Orari di Apertura</h4>
+            <p class="body-sm">Mar-Ven: <strong>11:30-13:30</strong> e <strong>18:00-21:30</strong><br>Altri giorni: <strong>18:00-21:30</strong></p>
+          </div>
+        </div>
+        <!-- Promo 2 -->
+        <div class="promo-card">
+          <div class="promo-icon-container">
+            <i class="fa-solid fa-martini-glass-citrus"></i>
+          </div>
+          <div class="promo-content">
+            <h4>Promozione Pranzo</h4>
+            <p class="body-sm">Con l'acquisto di una pizza dal valore superiore a <strong>5 €</strong>, ricevi una <strong>bibita in omaggio</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LE NOSTRE SPECIALITÀ (LE PIÙ RICHIESTE)
+       ========================================================================== */ -->
+  <section class="specialties-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="text-group">
+          <span class="label-md">Le nostre specialità</span>
+          <h2 class="headline-lg">Le più richieste</h2>
+        </div>
+        <div class="slider-nav">
+          <button class="btn-nav-arrow" aria-label="Precedente"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="btn-nav-arrow" aria-label="Successivo"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <div class="pizza-grid">
+        <!-- Card 1: Margherita -->
+        <article class="pizza-card">
+          <div class="pizza-card-img-container">
+            <img src="foto-elaborate/girasole-margherita.jpg" alt="Scrocchiarella Margherita monoporzione" class="pizza-card-img" loading="lazy">
+            <div class="pizza-tag-overlay">Top Rated</div>
+          </div>
+          <div class="pizza-card-content">
+            <div class="pizza-card-header">
+              <h3 class="pizza-card-title">Scrocchiarella Margherita</h3>
+              <span class="pizza-card-price">€9.50</span>
+            </div>
+            <div class="pizza-card-ingredients">
+              <p class="body-sm">Pomodoro, mozzarella.</p>
+            </div>
+            <div class="pizza-card-tags">
+              <span class="chip-tag">Monoporzione</span>
+              <span class="chip-tag">Vegetariana</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Diavola -->
+        <article class="pizza-card">
+          <div class="pizza-card-img-container">
+            <img src="foto-elaborate/girasole-diavola.jpg" alt="Scrocchiarella monoporzione" class="pizza-card-img" loading="lazy">
+          </div>
+          <div class="pizza-card-content">
+            <div class="pizza-card-header">
+              <h3 class="pizza-card-title">Scrocchiarella monoporzione</h3>
+              <span class="pizza-card-price">€—</span>
+            </div>
+            <div class="pizza-card-ingredients">
+              <p class="body-sm">Gusto da confermare.</p>
+            </div>
+            <div class="pizza-card-tags">
+              <span class="chip-tag">Monoporzione</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Nostrana -->
+        <article class="pizza-card">
+          <div class="pizza-card-img-container">
+            <img src="foto-elaborate/girasole-nostrana.jpg" alt="Scrocchiarella del mese: bresaola, burrata di bufala, rucola e pomodorini" class="pizza-card-img" loading="lazy">
+            <div class="pizza-tag-overlay">Del Mese</div>
+          </div>
+          <div class="pizza-card-content">
+            <div class="pizza-card-header">
+              <h3 class="pizza-card-title">Scrocchiarella del Mese (Giugno 2025)</h3>
+              <span class="pizza-card-price">€23.00</span>
+            </div>
+            <div class="pizza-card-ingredients">
+              <p class="body-sm">Bresaola, burrata di bufala, rucola e pomodorini.</p>
+            </div>
+            <div class="pizza-card-tags">
+              <span class="chip-tag">Biporzione</span>
+              <span class="chip-tag">Del mese</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LE NOSTRE SCROCCHIARELLE
+       ========================================================================== */ -->
+  <section class="scrocchiarele-section" style="background-color: var(--color-surface);">
+    <div class="container">
+      <div class="section-header">
+        <div class="text-group">
+          <span class="label-md">Le nostre scrocchiarele</span>
+          <h2 class="headline-lg">Le Scrocchiarele</h2>
+        </div>
+      </div>
+
+      <div class="pizza-grid">
+        <!-- Card 1: Scrocchiarella N. 1 -->
+        <article class="pizza-card">
+          <div class="pizza-card-img-container">
+            <img src="foto-elaborate/girasole-galleria-13-mortadella.jpg" alt="Scrocchiarella N.1 monoporzione: mortadella, burrata e pesto di pistacchio" class="pizza-card-img" loading="lazy">
+            <div class="pizza-tag-overlay">Special</div>
+          </div>
+          <div class="pizza-card-content">
+            <div class="pizza-card-header">
+              <h3 class="pizza-card-title">Scrocchiarella N. 1 (monoporzione)</h3>
+              <span class="pizza-card-price">€11.50</span>
+            </div>
+            <div class="pizza-card-ingredients">
+              <p class="body-sm">Mortadella, burrata di bufala fresca e pesto di pistacchio.</p>
+            </div>
+            <div class="pizza-card-tags">
+              <span class="chip-tag">Pistacchio</span>
+              <span class="chip-tag">Monoporzione</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Scrocchiarella N. 2 -->
+        <article class="pizza-card">
+          <div class="pizza-card-img-container">
+            <img src="foto-elaborate/girasole-prosciutto.jpg" alt="Pizza N. 2 con cipolle caramellate, scamorza e speck" class="pizza-card-img" loading="lazy">
+          </div>
+          <div class="pizza-card-content">
+            <div class="pizza-card-header">
+              <h3 class="pizza-card-title">Pizza N. 2</h3>
+              <span class="pizza-card-price">€8.50</span>
+            </div>
+            <div class="pizza-card-ingredients">
+              <p class="body-sm">Pomodoro, mozzarella, cipolle caramellate, scamorza, speck.</p>
+            </div>
+            <div class="pizza-card-tags">
+              <span class="chip-tag">Classica</span>
+              <span class="chip-tag">Saporita</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Scrocchiarella Focaccia -->
+        <article class="pizza-card">
+          <div class="pizza-card-img-container">
+            <img src="foto-elaborate/girasole-scrocchiarella-1.jpg" alt="Scrocchiarella grande Margherita" class="pizza-card-img" loading="lazy">
+          </div>
+          <div class="pizza-card-content">
+            <div class="pizza-card-header">
+              <h3 class="pizza-card-title">Scrocchiarella Margherita (grande)</h3>
+              <span class="pizza-card-price">€19.00</span>
+            </div>
+            <div class="pizza-card-ingredients">
+              <p class="body-sm">Pomodoro, mozzarella.</p>
+            </div>
+            <div class="pizza-card-tags">
+              <span class="chip-tag">Grande</span>
+              <span class="chip-tag">Margherita</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VISUAL GALLERY (L'ARTIGIANALITÀ)
+       ========================================================================== */ -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-grid">
+        <!-- Left Tall Image -->
+        <div class="gallery-card-tall">
+          <img src="foto-elaborate/girasole-galleria-34-titolare-impasto.jpg" alt="Il titolare lavora l'impasto a mano" loading="lazy">
+          <div class="gallery-overlay-content">
+            <h3>L'Artigianalità</h3>
+            <p>Ogni pizza è fatta a mano con passione.</p>
+          </div>
+        </div>
+
+        <!-- Right Column with Two Squares -->
+        <div class="gallery-right-col">
+          <!-- Square 1 -->
+          <div class="gallery-card-square">
+            <img src="foto-elaborate/girasole-galleria-26-forno-due-pizze.jpg" alt="Due pizze che cuociono nel forno" loading="lazy">
+          </div>
+          <!-- Square 2 -->
+          <div class="gallery-card-square">
+            <img src="foto-elaborate/girasole-galleria-32-bancone-pizzaiolo.jpg" alt="Il pizzaiolo al lavoro sul bancone" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PHOTO GALLERY (LA NOSTRA PIZZERIA)
+       ========================================================================== */ -->
+  <section class="photo-gallery-section" style="background-color: var(--color-surface);">
+    <div class="container">
+      <div class="section-header">
+        <div class="text-group">
+          <span class="label-md">Uno sguardo dietro le quinte</span>
+          <h2 class="headline-lg">La Nostra Pizzeria</h2>
+        </div>
+      </div>
+
+      <div class="photo-gallery-grid">
+        <figure class="photo-gallery-item">
+          <img src="foto-elaborate/girasole-galleria-03.jpg" alt="La nostra pizza artigianale appena sfornata" loading="lazy">
+        </figure>
+        <figure class="photo-gallery-item">
+          <img src="foto-elaborate/girasole-galleria-07-prosciutto-cotto.jpg" alt="Pizza con prosciutto cotto" loading="lazy">
+        </figure>
+        <figure class="photo-gallery-item">
+          <img src="foto-elaborate/girasole-galleria-10-confronto.jpg" alt="Le nostre pizze a confronto" loading="lazy">
+        </figure>
+        <figure class="photo-gallery-item">
+          <img src="foto-elaborate/girasole-galleria-15-salmone-zucchine.jpg" alt="Pizza con salmone e zucchine" loading="lazy">
+        </figure>
+        <figure class="photo-gallery-item">
+          <img src="foto-elaborate/girasole-galleria-17-confronto-crudo.jpg" alt="Pizza con prosciutto crudo" loading="lazy">
+        </figure>
+        <figure class="photo-gallery-item">
+          <img src="foto-elaborate/girasole-galleria-19-mortadella-primopiano-c.jpg" alt="Primo piano di pizza con mortadella e pistacchio" loading="lazy">
+        </figure>
+        <figure class="photo-gallery-item">
+          <img src="foto-elaborate/girasole-galleria-22-scooter-delivery.jpg" alt="Scooter per la consegna a domicilio" loading="lazy">
+        </figure>
+        <figure class="photo-gallery-item">
+          <img src="foto-elaborate/girasole-galleria-28-tonno-rucola-burrata.jpg" alt="Pizza con tonno, rucola e burrata" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== */ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-col-brand">
+          <h4>Pizzeria Il Girasole</h4>
+          <p class="body-sm">Pizzeria artigianale a Brembate Sopra. Passione, tradizione e ingredienti di prima scelta ogni giorno.</p>
+        </div>
+        <!-- Legal Links -->
+        <div>
+          <h5 class="footer-col-title">Links</h5>
+          <div class="footer-links">
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="termini.html" class="footer-link">Terms of Service</a>
+          </div>
+        </div>
+        <!-- Social Links -->
+        <div>
+          <h5 class="footer-col-title">Seguici</h5>
+          <div class="footer-links">
+            <a href="https://www.instagram.com/pizzeria_ilgirasole/" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/p/Pizzeria_Il-Girasole-100057613862609/" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright & Bottom info -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Pizzeria Il Girasole. All rights reserved.</p>
+        <p class="footer-copyright" style="color: var(--color-outline);">Via Centurelli 7, Brembate Sopra (BG)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
