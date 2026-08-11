@@ -468,7 +468,7 @@ section[id] { scroll-margin-top: var(--header-h); }
 .settori-card:hover::before { opacity: 1; }
 /* Icone settori: SVG inline nello stesso .icon-wrap di #offerta (una sola
    lingua visiva su tutta la pagina) invece delle emoji di prima — regola
-   `no-emoji-icons` già documentata in documentazione interna.
+   `no-emoji-icons` già documentata in P03/CLAUDE.md.
    `position: relative` serve a stare sopra il gradiente .settori-card::before. */
 .settori-icon {
   width: 42px; height: 42px;
@@ -504,6 +504,8 @@ section[id] { scroll-margin-top: var(--header-h); }
 .site-footer { background: var(--indaco-950); color: rgba(244,241,234,0.6); padding: 2rem 0; text-align: center; }
 .footer-inner p { margin: 0.2em 0; font-size: 0.85rem; color: inherit; }
 .footer-sub { opacity: 0.6; font-size: 0.78rem !important; }
+.footer-inner a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.footer-inner a:hover { opacity: 0.8; }
 
 /* ---------- Scroll reveal ---------- */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }

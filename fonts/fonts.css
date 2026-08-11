@@ -1,0 +1,19 @@
+/* Durata: LEGATO-A:P03 */
+/* Self-hosted da fonts.google.com (Space Grotesk, Inter) — T20, chiude il gap GDPR
+   di richieste dirette a fonts.googleapis.com/fonts.gstatic.com dal browser del visitatore.
+   Entrambi i file sono i font variabili (asse wght) serviti da Google stessa alla richiesta
+   originale: un unico .woff2 copre l'intero range di pesi usati dal sito. */
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("space-grotesk-variable.woff2") format("woff2");
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("inter-variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
