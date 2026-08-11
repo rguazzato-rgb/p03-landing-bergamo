@@ -12,15 +12,22 @@
 <link rel="icon" href="img/logo-icona.jpg">
 </head>
 <body>
+<a href="../index.html" class="quadra-back-link" aria-label="Torna al sito QUADRALABS" style="position:fixed;left:14px;bottom:14px;z-index:99999;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:#171a3d;color:#f4f1ea;font:600 13px/1 system-ui,-apple-system,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.14)">← QUADRALABS</a>
 
 <div class="panna-bordo panna-destra" aria-hidden="true">
   <svg viewBox="0 0 60 800" preserveAspectRatio="none">
     <path id="via-destra" class="panna-base" pathLength="1000" d="M30 800 C50 750 10 720 30 680 C50 640 10 610 30 570 C50 530 10 500 30 460 C50 420 10 390 30 350 C50 310 10 280 30 240 C50 200 10 170 30 130 C50 90 10 60 30 20 C36 10 30 4 30 0"/>
     <path class="panna-luce" pathLength="1000" d="M30 800 C50 750 10 720 30 680 C50 640 10 610 30 570 C50 530 10 500 30 460 C50 420 10 390 30 350 C50 310 10 280 30 240 C50 200 10 170 30 130 C50 90 10 60 30 20 C36 10 30 4 30 0"/>
     <g class="sac-punta">
-      <polygon points="-14,0 11,-7 11,7" fill="#e3ddce" stroke="#948a72" stroke-width="1.1" stroke-linejoin="round"/>
-      <rect x="7" y="-4.5" width="4" height="9" rx="1" fill="#cfc6b0"/>
-      <circle cx="-17" cy="0" r="2.2" fill="#fffdf7"/>
+      <!-- Punta spostata in avanti (+8 sull'asse locale x, direzione di marcia data
+           da rotate="auto"): il fronte della panna ha stroke-linecap:round largo
+           26px/2=13 oltre al punto matematico del path, e la bocchetta (prima a
+           x=11) ci finiva dentro invece di sporgere davanti — verificato mettendo
+           in pausa l'animazione a metà corsa e ingrandendo lo screenshot. Ora la
+           punta arriva a x=19, ~6 unità oltre il bordo arrotondato della panna. -->
+      <polygon points="-6,0 19,-7 19,7" fill="#e3ddce" stroke="#948a72" stroke-width="1.1" stroke-linejoin="round"/>
+      <rect x="15" y="-4.5" width="4" height="9" rx="1" fill="#cfc6b0"/>
+      <circle cx="-9" cy="0" r="2.2" fill="#fffdf7"/>
       <animateMotion dur="7s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.55;1">
         <mpath href="#via-destra"/>
       </animateMotion>
@@ -33,9 +40,11 @@
     <path id="via-sinistra" class="panna-base" pathLength="1000" d="M30 0 C10 40 50 70 30 110 C10 150 50 180 30 220 C10 260 50 290 30 330 C10 370 50 400 30 440 C10 480 50 510 30 550 C10 590 50 620 30 660 C10 700 50 730 30 770 C24 785 30 796 30 800"/>
     <path class="panna-luce" pathLength="1000" d="M30 0 C10 40 50 70 30 110 C10 150 50 180 30 220 C10 260 50 290 30 330 C10 370 50 400 30 440 C10 480 50 510 30 550 C10 590 50 620 30 660 C10 700 50 730 30 770 C24 785 30 796 30 800"/>
     <g class="sac-punta">
-      <polygon points="-14,0 11,-7 11,7" fill="#e3ddce" stroke="#948a72" stroke-width="1.1" stroke-linejoin="round"/>
-      <rect x="7" y="-4.5" width="4" height="9" rx="1" fill="#cfc6b0"/>
-      <circle cx="-17" cy="0" r="2.2" fill="#fffdf7"/>
+      <!-- Stessa correzione del lato destro: punta spostata avanti (+8 locali) così
+           sporge oltre il bordo arrotondato (13px) del fronte della panna. -->
+      <polygon points="-6,0 19,-7 19,7" fill="#e3ddce" stroke="#948a72" stroke-width="1.1" stroke-linejoin="round"/>
+      <rect x="15" y="-4.5" width="4" height="9" rx="1" fill="#cfc6b0"/>
+      <circle cx="-9" cy="0" r="2.2" fill="#fffdf7"/>
       <animateMotion dur="7s" begin="1.4s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.55;1">
         <mpath href="#via-sinistra"/>
       </animateMotion>

@@ -16,8 +16,9 @@
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
+<a href="../index.html" class="quadra-back-link" aria-label="Torna al sito QUADRALABS" style="position:fixed;left:14px;bottom:14px;z-index:99999;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:#171a3d;color:#f4f1ea;font:600 13px/1 system-ui,-apple-system,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.14)">← QUADRALABS</a>
 
-<div class="poc-banner">PoC — sito dimostrativo per il Campo Scuola Giovani Alpini ASB. Dati/costi da confermare con l'organizzazione.</div>
+<div class="poc-banner">PoC — sito dimostrativo per il Campo Scuola Giovani Alpini ASB. Dati/costi da confermare con l'organizzazione, vedi <a href="ricerca-web.md" style="color:#fff;text-decoration:underline;">ricerca-web.md</a>. Analisi dei moduli cartacei (iscrizione + ammissione Socio A.P.S.) in <a href="analisi-modulo-pdf.md" style="color:#fff;text-decoration:underline;">analisi-modulo-pdf.md</a>.</div>
 
 <header class="navbar">
   <div class="container">
@@ -62,7 +63,7 @@
          RICARICA la pagina per allegare": senza salvataggio, quel reload azzera
          68 campi. Chi non accede compila e invia esattamente come prima.
 
-         ⚠ DEVE STARE FUORI da entrambi i <form> del modulo. `documentazione interna`
+         ⚠ DEVE STARE FUORI da entrambi i <form> del modulo. `genera_artefatti.py`
          estrae i campi obbligatori dagli attributi `required` che trova dentro il
          tag di apertura del modulo iscrizione e il primo tag di chiusura form: un
          campo di questo blocco finito lì dentro diventerebbe un obbligatorio del
@@ -465,7 +466,7 @@
                  invece di un unico campo multiplo: nel foglio backend ogni documento ha la sua
                  colonna, cosi' l'organizzazione filtra "a chi manca il certificato vaccinazioni"
                  senza aprire nessuna cartella. `color` esplicito perche' questo blocco bianco sta
-                 dentro la sidebar verde scura (vedi bug testo bianco-su-bianco in documentazione interna P03). -->
+                 dentro la sidebar verde scura (vedi bug testo bianco-su-bianco in CLAUDE.md P03). -->
             <div class="mod-upload-grid mod-full" style="background:var(--color-white);color:var(--color-text);padding:0.6rem 0.7rem;">
               <span class="mod-field-label">Carica qui le copie dei documenti</span>
               <p class="form-note" style="margin:0;">Foto o PDF, massimo 5 MB per file. Se un documento non ce l'hai ancora puoi lasciarlo vuoto e inviarcelo entro il 31/5/2026.</p>
@@ -672,7 +673,7 @@
           <!-- Passo obbligatorio introdotto il 2026-07-26: il genitore deve firmare a mano
                il PDF pre-compilato (niente più dati da ricopiare) e allegarne la scansione
                completa. `required` sull'input -> il browser blocca l'invio se manca; la
-               validazione lato server e' generata in documentazione interna (vedi documentazione interna). -->
+               validazione lato server e' generata in Code.gs (vedi genera_artefatti.py). -->
           <div class="mod-yellow-box" style="margin:var(--space-sm) 0;">
             <strong>Passo obbligatorio prima di inviare:</strong> stampa il PDF appena scaricato,
             <strong>firma a mano</strong> in tutti i punti richiesti (responsabilità e autorizzazione,
@@ -692,7 +693,7 @@
     </form>
 
     <p class="mod-footer-note text-center" style="max-width:794px;margin:var(--space-md) auto 0;">
-      L'iscrizione ufficiale avviene tramite il modulo del Gruppo Alpini: si scarica, si compila, si firma e si invia via email a <a href="mailto:camposcuolaasb24@gmail.com">camposcuolaasb24@gmail.com</a> (modulo disponibile dal 1° febbraio 2026 su <a href="https://www.gruppoalpiniasb.it" target="_blank" rel="noopener">gruppoalpiniasb.it</a>). Fonte del contenuto: <a href="MOD.ALLIEVO-COMPLETO.pdf" target="_blank" rel="noopener">modulo ufficiale 2026 (PDF)</a>.
+      L'iscrizione ufficiale avviene tramite il modulo del Gruppo Alpini: si scarica, si compila, si firma e si invia via email a <a href="mailto:camposcuolaasb24@gmail.com">camposcuolaasb24@gmail.com</a> (modulo disponibile dal 1° febbraio 2026 su <a href="https://www.gruppoalpiniasb.it" target="_blank" rel="noopener">gruppoalpiniasb.it</a>). Fonte del contenuto: <a href="MOD.ALLIEVO-COMPLETO.pdf" target="_blank" rel="noopener">modulo ufficiale 2026 (PDF)</a> — vedi anche <a href="analisi-modulo-pdf.md">analisi-modulo-pdf.md</a>.
     </p>
   </div>
 </div>
@@ -902,7 +903,7 @@
     </form>
 
     <p class="mod-footer-note text-center" style="max-width:794px;margin:var(--space-md) auto 0;">
-      Fonte del contenuto: <a href="Modulo.APS.pdf" target="_blank" rel="noopener">modulo ufficiale di ammissione a Socio A.P.S. (PDF)</a>.APS.pdf".
+      Fonte del contenuto: <a href="Modulo.APS.pdf" target="_blank" rel="noopener">modulo ufficiale di ammissione a Socio A.P.S. (PDF)</a> — vedi anche <a href="analisi-modulo-pdf.md">analisi-modulo-pdf.md</a> § "Analisi Modulo.APS.pdf".
     </p>
   </div>
 </div>
