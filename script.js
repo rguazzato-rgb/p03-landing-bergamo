@@ -147,9 +147,8 @@
   // Niente snippet gtag statico in <head>: lo script si carica SOLO dopo
   // il click su "Accetta" (o subito se il consenso era già salvato), così
   // nessun cookie/richiesta a Google parte prima del consenso.
-  // TODO Riccardo: sostituisci con l'ID reale della property GA4
-  // (analytics.google.com -> Amministrazione -> Flussi di dati -> Web -> ID misurazione, es. "G-ABC1234XYZ").
-  var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+  // Property "QUADRALABS — siti.quadralabs.eu", flusso web creato 2026-08-12.
+  var GA_MEASUREMENT_ID = "G-PQ45QLM6E3";
   var GA_CONSENT_KEY = "quadralabs-consent"; // "granted" | "denied"
 
   function loadGA() {
