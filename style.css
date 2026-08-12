@@ -549,6 +549,36 @@ section[id] { scroll-margin-top: var(--header-h); }
 .footer-inner a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .footer-inner a:hover { opacity: 0.8; }
 
+/* ---------- Cookie banner ---------- */
+.cookie-banner {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 500;
+  background: var(--indaco-950);
+  color: var(--testo-chiaro);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  box-shadow: var(--ombra);
+}
+.cookie-banner[hidden] { display: none; }
+.cookie-banner-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem 1.5rem;
+}
+.cookie-banner-inner p { margin: 0; font-size: 0.88rem; line-height: 1.5; color: rgba(244,241,234,0.85); flex: 1 1 420px; }
+.cookie-banner-inner a { color: var(--ambra-chiara); text-decoration: underline; text-underline-offset: 2px; }
+.cookie-banner-actions { display: flex; gap: 0.7rem; flex-shrink: 0; }
+.btn-sm { padding: 0.6rem 1.3rem; font-size: 0.86rem; }
+@media (max-width: 620px) {
+  .cookie-banner-inner { flex-direction: column; align-items: stretch; }
+  .cookie-banner-actions { justify-content: flex-end; }
+}
+
 /* ---------- Scroll reveal ---------- */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }

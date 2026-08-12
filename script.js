@@ -143,6 +143,56 @@
     }, true);
   }
 
+  // Google Analytics 4, dietro consenso esplicito (banner sotto).
+  // Niente snippet gtag statico in <head>: lo script si carica SOLO dopo
+  // il click su "Accetta" (o subito se il consenso era già salvato), così
+  // nessun cookie/richiesta a Google parte prima del consenso.
+  // TODO Riccardo: sostituisci con l'ID reale della property GA4
+  // (analytics.google.com -> Amministrazione -> Flussi di dati -> Web -> ID misurazione, es. "G-ABC1234XYZ").
+  var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+  var GA_CONSENT_KEY = "quadralabs-consent"; // "granted" | "denied"
+
+  function loadGA() {
+    if (window.__gaLoaded || GA_MEASUREMENT_ID.indexOf("XXXX") !== -1) return;
+    window.__gaLoaded = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_MEASUREMENT_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true });
+  }
+
+  var cookieBanner = document.getElementById("cookieBanner");
+  var gaConsent = null;
+  try { gaConsent = localStorage.getItem(GA_CONSENT_KEY); } catch (e) { /* storage bloccato dal browser: trattalo come non deciso, banner resta comunque nascosto per non rompere la pagina */ }
+
+  if (gaConsent === "granted") {
+    loadGA();
+  } else if (gaConsent !== "denied" && cookieBanner) {
+    cookieBanner.hidden = false;
+  }
+
+  if (cookieBanner) {
+    var gaAcceptBtn = document.getElementById("cookieAccept");
+    var gaDeclineBtn = document.getElementById("cookieDecline");
+    if (gaAcceptBtn) {
+      gaAcceptBtn.addEventListener("click", function () {
+        try { localStorage.setItem(GA_CONSENT_KEY, "granted"); } catch (e) {}
+        loadGA();
+        cookieBanner.hidden = true;
+      });
+    }
+    if (gaDeclineBtn) {
+      gaDeclineBtn.addEventListener("click", function () {
+        try { localStorage.setItem(GA_CONSENT_KEY, "denied"); } catch (e) {}
+        cookieBanner.hidden = true;
+      });
+    }
+  }
+
   function animateCount(el) {
     var target = parseInt(el.getAttribute("data-count"), 10) || 0;
     var duration = 900;

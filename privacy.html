@@ -34,7 +34,7 @@
 <main class="container" style="max-width: 760px; padding: calc(76px + 3rem) 0 5rem;">
   <p class="kicker">Informativa</p>
   <h1 style="margin-bottom: 1.4rem;">Privacy &amp; Cookie</h1>
-  <p style="font-size: 0.9rem; color: var(--testo-tenue); margin-bottom: 2rem;">Ultimo aggiornamento: 11 agosto 2026</p>
+  <p style="font-size: 0.9rem; color: var(--testo-tenue); margin-bottom: 2rem;">Ultimo aggiornamento: 12 agosto 2026</p>
 
   <h3 style="margin: 1.6rem 0 0.5rem; font-family: var(--font-display);">Chi siamo</h3>
   <p>Questo sito è realizzato da <strong>QUADRALABS</strong>, un team di studenti di Ingegneria Gestionale
@@ -60,8 +60,20 @@
   nessuna risorsa esterna caricata a parte le immagini fotografiche ospitate qui stesso.</p>
 
   <h3 style="margin: 1.6rem 0 0.5rem; font-family: var(--font-display);">Cookie</h3>
-  <p>Questo sito non usa cookie di profilazione né di terze parti. Non installiamo strumenti di
-  tracciamento/analytics al momento.</p>
+  <p>Questo sito usa <strong>Google Analytics 4</strong> per capire in forma aggregata come viene
+  usato (pagine visitate, tempo di permanenza, provenienza del traffico) — <strong>non per
+  pubblicità e non per profilazione individuale</strong>. Lo script parte solo dopo che scegli
+  "Accetta" nel banner cookie mostrato alla prima visita: se scegli "Rifiuta" o chiudi il banner
+  senza rispondere, Google Analytics resta disattivato e nessun cookie viene installato.</p>
+  <p>Se accetti, il tuo browser scarica lo script <code>gtag.js</code> da Google e imposta cookie
+  tecnici di Google Analytics (es. <code>_ga</code>, <code>_ga_*</code>), con durata fino a 2 anni,
+  usati solo per distinguere le sessioni in forma statistica. L'indirizzo IP viene troncato prima
+  di essere salvato (<code>anonymize_ip</code>). Titolare di questi dati per la parte tecnica è
+  Google Ireland Ltd. — informativa di Google:
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+  <p>Puoi cambiare idea in qualsiasi momento:
+  <button type="button" id="resetCookieConsent" style="background:none;border:1px solid var(--bordo);border-radius:999px;padding:0.4rem 1rem;font:inherit;font-size:0.85rem;cursor:pointer;color:var(--testo);">Gestisci preferenze cookie</button>
+  — cancella la scelta salvata e ti rimostra il banner al prossimo caricamento della pagina.</p>
 
   <h3 style="margin: 1.6rem 0 0.5rem; font-family: var(--font-display);">I tuoi diritti</h3>
   <p>Puoi chiedere in ogni momento accesso, rettifica o cancellazione dei dati che ci hai lasciato
@@ -82,5 +94,12 @@
   </div>
 </footer>
 
+<script>
+  // Stesso GA_CONSENT_KEY di script.js (duplicato qui: questa pagina non carica script.js).
+  document.getElementById("resetCookieConsent").addEventListener("click", function () {
+    try { localStorage.removeItem("quadralabs-consent"); } catch (e) {}
+    window.location.href = "index.html";
+  });
+</script>
 </body>
 </html>
