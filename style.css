@@ -371,6 +371,23 @@ section[id] { scroll-margin-top: var(--header-h); }
 .offerta-banner-kicker { color: var(--ambra-chiara); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6em; }
 .offerta-banner-quote { font-family: var(--font-display); font-size: clamp(1.05rem, 1.8vw, 1.3rem); line-height: 1.5; color: var(--testo-chiaro); margin: 0; }
 
+.offerta-contatto {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-top: 1.3rem;
+  padding: 1.8rem 2rem;
+  background: var(--carta);
+  border: 1px solid var(--bordo);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--ombra-lieve);
+}
+.offerta-contatto-icon { flex-shrink: 0; margin-bottom: 0; }
+.offerta-contatto-testo { flex: 1; min-width: 220px; }
+.offerta-contatto-testo h3 { font-size: 1.05rem; margin-bottom: 0.3em; }
+.offerta-contatto-testo p { font-size: 0.9rem; margin: 0; }
+.offerta-contatto-cta { flex-shrink: 0; white-space: nowrap; }
+
 /* ---------- Lavori / portfolio ----------
    Striscia orizzontale con screenshot REALI dei PoC (presi da
    membri/riccardo/marketing-instagram/p03-instagram/screenshot-reali-poc/).
@@ -619,6 +636,8 @@ section[id] { scroll-margin-top: var(--header-h); }
 
   .competenze-grid { grid-template-columns: 1fr; }
   .offerta-grid { grid-template-columns: 1fr; }
+  .offerta-contatto { flex-direction: column; text-align: center; }
+  .offerta-contatto-cta { width: 100%; justify-content: center; }
   .settori-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-stats { gap: 1.6rem; }
   .brand-word { font-size: 0.95rem; }
