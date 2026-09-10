@@ -401,10 +401,14 @@ section[id] { scroll-margin-top: var(--header-h); }
    Riccardo): niente JS, l'espansione al passaggio del mouse è puro CSS —
    .team-carousel:hover .team-panel abbassa flex-grow su tutti i pannelli,
    .team-panel:hover lo rialza solo su quello sotto al puntatore.
-   Foto: solo Kevin ha una foto vera (img/team-kevin.jpg). Riccardo, Andrea e
-   Niccolò usano un avatar a iniziali finché non forniscono una foto reale —
-   niente foto finte generate, per la stessa regola "nome e faccia veri" già
-   documentata in README. Il ruolo di Andrea resta da confermare. */
+   Foto: Kevin (img/team-kevin.jpg) e Riccardo (img/team-riccardo.jpg) hanno una
+   foto vera — entrambi ritratti reali con sfondo brand indaco + logo 3D sfocato
+   generati via fal-ai (Riccardo 2026-09-09, Kevin 2026-09-10), non foto finte
+   delle persone. Andrea e Niccolò usano ancora un avatar a iniziali finché non
+   forniscono una foto reale — niente ritratti finti generati, per la regola
+   "nome e faccia veri".
+   Il ruolo di Andrea resta da confermare.
+   Prompt per generare le foto team mancanti: prompt-foto-team-sfondo-brand.md */
 .team { background: var(--panna); }
 .team-carousel {
   display: flex;
