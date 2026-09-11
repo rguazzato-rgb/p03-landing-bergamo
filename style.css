@@ -401,6 +401,12 @@ section[id] { scroll-margin-top: var(--header-h); }
    Riccardo): niente JS, l'espansione al passaggio del mouse è puro CSS —
    .team-carousel:hover .team-panel abbassa flex-grow su tutti i pannelli,
    .team-panel:hover lo rialza solo su quello sotto al puntatore.
+   Dal 2026-09-11 l'accordion è VERTICALE (richiesta di Riccardo — "le foto si
+   allarghino in verticale al hover"): stesso meccanismo flex-grow, solo asse
+   ruotato (flex-direction: column, il pannello sotto il mouse cresce in
+   ALTEZZA anziché in larghezza). Vale anche su mobile, quindi la vecchia
+   media query che forzava la colonna solo sotto 768px è stata rimossa
+   (ridondante — vedi in fondo al file).
    Foto: Kevin (img/team-kevin.jpg) e Riccardo (img/team-riccardo.jpg) hanno una
    foto vera — entrambi ritratti reali con sfondo brand indaco + logo 3D sfocato
    generati via fal-ai (Riccardo 2026-09-09, Kevin 2026-09-10), non foto finte
@@ -412,14 +418,15 @@ section[id] { scroll-margin-top: var(--header-h); }
 .team { background: var(--panna); }
 .team-carousel {
   display: flex;
+  flex-direction: column;
   gap: 0.6rem;
-  height: 420px;
+  height: 620px;
   border-radius: var(--radius-lg);
 }
 .team-panel {
   position: relative;
   flex: 1 1 0;
-  min-width: 0;
+  min-height: 0;
   overflow: hidden;
   border-radius: var(--radius-lg);
   box-shadow: var(--ombra-lieve);
@@ -660,6 +667,17 @@ section[id] { scroll-margin-top: var(--header-h); }
   color: var(--testo);
 }
 .btn-outline:hover { background: var(--panna-alt); border-color: var(--testo-tenue); transform: translateY(-2px); }
+.pricing-cta.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--ambra-scura);
+  color: var(--ambra-scura);
+}
+.pricing-cta.btn-outline:hover {
+  background: linear-gradient(135deg, var(--ambra), var(--ambra-scura));
+  border-color: var(--ambra-scura);
+  color: var(--indaco-950);
+  transform: translateY(-2px);
+}
 
 .pricing-table-wrap { margin-top: 0.5rem; }
 .pricing-table-scroll { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--bordo); background: var(--carta); }
@@ -961,8 +979,8 @@ section[id] { scroll-margin-top: var(--header-h); }
   .pricing-tabs { display: flex; }
   .pricing-tab { flex: 1; text-align: center; }
 
-  /* Sotto i 720px niente hover reale: pannelli impilati, info sempre visibile. */
-  .team-carousel { flex-direction: column; height: auto; gap: 0.7rem; }
+  /* Sotto i 720px niente hover reale (touch): pannelli a altezza fissa, info sempre visibile. */
+  .team-carousel { height: auto; gap: 0.7rem; }
   .team-panel { flex: 0 0 220px; }
   .team-panel::after { opacity: 0.85; }
   .team-panel-info p { opacity: 1; transform: translateY(0); }
