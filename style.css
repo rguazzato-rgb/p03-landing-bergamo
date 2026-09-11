@@ -440,6 +440,12 @@ section[id] { scroll-margin-top: var(--header-h); }
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
+  /* Le foto sono verticali con la faccia nel terzo superiore: senza
+     ancorare qui, l'espansione flex-grow al hover scala l'immagine per
+     coprire la larghezza e ritaglia verticalmente dal CENTRO — cioè
+     "zooma" su collo/petto invece che sulla faccia. Ancorato in alto
+     così lo zoom resta sulla faccia a qualunque grado di espansione. */
+  object-position: 50% 15%;
 }
 .team-panel-avatar {
   display: flex; align-items: center; justify-content: center;
