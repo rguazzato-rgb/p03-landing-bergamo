@@ -221,14 +221,156 @@
         </div>
       </div>
 
-      <div class="offerta-banner reveal">
-        <img class="offerta-banner-img" src="img/cta-piazza-phone.jpg" alt="" loading="lazy">
-        <div class="offerta-banner-text">
-          <p class="offerta-banner-kicker">Quanto costa?</p>
-          <p class="offerta-banner-quote">
-            «Dipende da cosa ti serve, ne parliamo caso per caso — l'idea è restare
-            sotto quello che costa una vetrina pubblicitaria.»
-          </p>
+      <p class="kicker reveal">Quanto costa</p>
+      <h3 class="pricing-heading reveal">Prezzi di listino — il progetto lo definiamo insieme in una chiamata</h3>
+
+      <div class="pricing">
+        <div class="pricing-tabs reveal" role="tablist" aria-label="Vista prezzi">
+          <button type="button" class="pricing-tab is-active" id="pricingTabCards" role="tab" aria-selected="true" aria-controls="pricingCards">Pacchetti</button>
+          <button type="button" class="pricing-tab" id="pricingTabTable" role="tab" aria-selected="false" aria-controls="pricingTable">Confronta le funzioni</button>
+        </div>
+
+        <div class="pricing-toggle reveal">
+          <span class="pricing-toggle-label is-active" data-toggle-label="primo">Primo anno</span>
+          <button type="button" class="pricing-switch" id="pricingSwitch" role="switch" aria-checked="false" aria-label="Passa al prezzo di rinnovo annuale">
+            <span class="pricing-switch-knob"></span>
+          </button>
+          <span class="pricing-toggle-label" data-toggle-label="rinnovo">Rinnovo annuale</span>
+        </div>
+
+        <div class="pricing-grid" id="pricingCards" role="tabpanel" aria-labelledby="pricingTabCards">
+          <div class="pricing-card reveal" data-primo-price="149€" data-primo-period="una tantum" data-rinnovo-price="89€" data-rinnovo-period="/anno">
+            <div class="pricing-card-head">
+              <h3>Landing Base</h3>
+              <p>1 pagina scroll, template semi-standard, dominio+email+SSL inclusi.</p>
+            </div>
+            <div class="pricing-card-price">
+              <span class="pricing-amount">149€</span>
+              <span class="pricing-period">una tantum</span>
+            </div>
+            <ul class="pricing-features">
+              <li class="is-yes">Dominio + email + SSL inclusi</li>
+              <li class="is-yes">Template da libreria, pronto in pochi giorni</li>
+              <li class="is-yes">Form contatti, Maps, social, click-to-call</li>
+              <li class="is-no">Cookie banner: extra 39€</li>
+              <li class="is-no">Nessuna modifica mensile inclusa</li>
+            </ul>
+            <a href="mailto:info@quadralabs.eu?subject=Interesse%20per%20Landing%20Base" class="btn btn-ghost pricing-cta">Chiedi info</a>
+          </div>
+
+          <div class="pricing-card reveal" data-primo-price="249€" data-primo-period="primo anno" data-rinnovo-price="129€" data-rinnovo-period="/anno">
+            <div class="pricing-card-head">
+              <h3>One Page Core</h3>
+              <p>1 pagina, form contatti, Maps, social, click-to-call.</p>
+            </div>
+            <div class="pricing-card-price">
+              <span class="pricing-amount">249€</span>
+              <span class="pricing-period">primo anno</span>
+            </div>
+            <ul class="pricing-features">
+              <li class="is-yes">Dominio + email + SSL inclusi</li>
+              <li class="is-yes">Form, Maps, social, click-to-call</li>
+              <li class="is-yes">1 modifica al mese inclusa</li>
+              <li class="is-yes">Backup mensile</li>
+              <li class="is-no">Cookie banner: extra 39€</li>
+            </ul>
+            <a href="mailto:info@quadralabs.eu?subject=Interesse%20per%20One%20Page%20Core" class="btn btn-ghost pricing-cta">Chiedi info</a>
+          </div>
+
+          <div class="pricing-card reveal" data-primo-price="349€" data-primo-period="primo anno" data-rinnovo-price="169€" data-rinnovo-period="/anno">
+            <div class="pricing-card-head">
+              <h3>One Page Premium</h3>
+              <p>Come Core, con più modifiche incluse ogni mese.</p>
+            </div>
+            <div class="pricing-card-price">
+              <span class="pricing-amount">349€</span>
+              <span class="pricing-period">primo anno</span>
+            </div>
+            <ul class="pricing-features">
+              <li class="is-yes">Tutto di One Page Core</li>
+              <li class="is-yes">3 modifiche al mese incluse</li>
+              <li class="is-yes">Backup mensile</li>
+              <li class="is-no">Cookie banner: extra 39€</li>
+            </ul>
+            <a href="mailto:info@quadralabs.eu?subject=Interesse%20per%20One%20Page%20Premium" class="btn btn-ghost pricing-cta">Chiedi info</a>
+          </div>
+
+          <div class="pricing-card reveal" data-primo-price="690€" data-primo-period="primo anno" data-rinnovo-price="320€" data-rinnovo-period="/anno">
+            <div class="pricing-card-head">
+              <h3>Smart Site Core</h3>
+              <p>Fino a 6 pagine, e-commerce ed hosting inclusi.</p>
+            </div>
+            <div class="pricing-card-price">
+              <span class="pricing-amount">690€</span>
+              <span class="pricing-period">primo anno</span>
+            </div>
+            <ul class="pricing-features">
+              <li class="is-yes">Fino a 6 pagine</li>
+              <li class="is-yes">E-commerce incluso</li>
+              <li class="is-yes">Hosting con database incluso</li>
+              <li class="is-yes">Cookie banner incluso</li>
+              <li class="is-yes">1 modifica al mese, backup mensile</li>
+            </ul>
+            <a href="mailto:info@quadralabs.eu?subject=Interesse%20per%20Smart%20Site%20Core" class="btn btn-ghost pricing-cta">Chiedi info</a>
+          </div>
+
+          <div class="pricing-card reveal" data-primo-price="950€" data-primo-period="primo anno" data-rinnovo-price="420€" data-rinnovo-period="/anno">
+            <div class="pricing-card-head">
+              <h3>Smart Site Premium</h3>
+              <p>6 pagine o più, per chi cresce ancora di più online.</p>
+            </div>
+            <div class="pricing-card-price">
+              <span class="pricing-amount">950€</span>
+              <span class="pricing-period">primo anno</span>
+            </div>
+            <ul class="pricing-features">
+              <li class="is-yes">6 pagine o più</li>
+              <li class="is-yes">E-commerce incluso</li>
+              <li class="is-yes">Hosting con database incluso</li>
+              <li class="is-yes">3 modifiche al mese incluse</li>
+              <li class="is-yes">Backup settimanale</li>
+            </ul>
+            <a href="mailto:info@quadralabs.eu?subject=Interesse%20per%20Smart%20Site%20Premium" class="btn btn-ghost pricing-cta">Chiedi info</a>
+          </div>
+        </div>
+
+        <div class="pricing-table-wrap" id="pricingTable" role="tabpanel" aria-labelledby="pricingTabTable" hidden>
+          <div class="pricing-table-scroll">
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th scope="col">Caratteristica</th>
+                  <th scope="col" data-primo-price="149€" data-primo-period="una tantum" data-rinnovo-price="89€" data-rinnovo-period="/anno">
+                    <div class="pricing-table-head">Landing Base<span class="pricing-amount">149€</span><span class="pricing-period">una tantum</span></div>
+                  </th>
+                  <th scope="col" data-primo-price="249€" data-primo-period="primo anno" data-rinnovo-price="129€" data-rinnovo-period="/anno">
+                    <div class="pricing-table-head">One Page Core<span class="pricing-amount">249€</span><span class="pricing-period">primo anno</span></div>
+                  </th>
+                  <th scope="col" data-primo-price="349€" data-primo-period="primo anno" data-rinnovo-price="169€" data-rinnovo-period="/anno">
+                    <div class="pricing-table-head">One Page Premium<span class="pricing-amount">349€</span><span class="pricing-period">primo anno</span></div>
+                  </th>
+                  <th scope="col" data-primo-price="690€" data-primo-period="primo anno" data-rinnovo-price="320€" data-rinnovo-period="/anno">
+                    <div class="pricing-table-head">Smart Site Core<span class="pricing-amount">690€</span><span class="pricing-period">primo anno</span></div>
+                  </th>
+                  <th scope="col" data-primo-price="950€" data-primo-period="primo anno" data-rinnovo-price="420€" data-rinnovo-period="/anno">
+                    <div class="pricing-table-head">Smart Site Premium<span class="pricing-amount">950€</span><span class="pricing-period">primo anno</span></div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Pagine</td><td>1</td><td>1</td><td>1</td><td>fino a 6</td><td>6 o più</td></tr>
+                <tr><td>Dominio + email + SSL</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                <tr><td>Modifiche incluse</td><td>–</td><td>1 / mese</td><td>3 / mese</td><td>1 / mese</td><td>3 / mese</td></tr>
+                <tr><td>Cookie banner</td><td>extra</td><td>extra</td><td>extra</td><td>✓</td><td>✓</td></tr>
+                <tr><td>Backup</td><td>–</td><td>✓ mensile</td><td>✓ mensile</td><td>✓ mensile</td><td>✓ settimanale</td></tr>
+                <tr><td>Hosting con database</td><td>su richiesta</td><td>su richiesta</td><td>su richiesta</td><td>✓</td><td>✓</td></tr>
+                <tr><td>E-commerce</td><td>–</td><td>–</td><td>–</td><td>✓</td><td>✓</td></tr>
+                <tr><td>Lingue incluse</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                <tr><td>Form, Maps, social, click-to-call</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="pricing-table-legend">✓ incluso · extra = a pagamento a parte · su richiesta = a preventivo · – non disponibile su questo pacchetto</p>
         </div>
       </div>
 
@@ -241,6 +383,69 @@
           <p>Raccontaci la tua attività via email: ti risponde direttamente il team, non un modulo automatico.</p>
         </div>
         <a href="mailto:info@quadralabs.eu" class="btn btn-primary offerta-contatto-cta">info@quadralabs.eu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXTRA A LA CARTE -->
+  <section id="extra" class="section extra">
+    <div class="container">
+      <p class="kicker reveal">Extra a la carte</p>
+      <h2 class="reveal">Aggiunte su misura, quando servono</h2>
+      <p class="section-lead reveal">
+        Ogni pacchetto copre le funzioni base. Questi sono gli extra più richiesti, a prezzo fisso —
+        non serve un preventivo per sapere quanto costano.
+      </p>
+
+      <div class="extra-grid">
+        <div class="extra-card reveal">
+          <h3>Cookie banner</h3>
+          <p class="extra-price">39€ <span>una tantum</span></p>
+          <p class="extra-note">Solo su One Page e Landing Base — incluso di serie sugli Smart Site.</p>
+        </div>
+        <div class="extra-card reveal">
+          <h3>Grafiche e rebranding logo</h3>
+          <p class="extra-price">150–300€ <span>una tantum</span></p>
+        </div>
+        <div class="extra-card reveal">
+          <h3>Foto e video</h3>
+          <p class="extra-price">20€ <span>/foto</span></p>
+          <p class="extra-note">Pacchetto 10 foto: 99€.</p>
+        </div>
+        <div class="extra-card reveal">
+          <h3>Riprese drone</h3>
+          <p class="extra-price">150–250€ <span>/sessione</span></p>
+        </div>
+        <div class="extra-card reveal">
+          <h3>Lingua extra</h3>
+          <p class="extra-price">89€ <span>/lingua</span></p>
+          <p class="extra-note">149€/lingua sugli Smart Site multipagina.</p>
+        </div>
+        <div class="extra-card reveal">
+          <h3>Hosting su richiesta</h3>
+          <p class="extra-price">+49€ <span>/anno</span></p>
+          <p class="extra-note">Solo Landing Base e One Page, se serve comunque un database.</p>
+        </div>
+        <div class="extra-card reveal">
+          <h3>Modifica extra</h3>
+          <p class="extra-price">25€ <span>/modifica</span></p>
+          <p class="extra-note">Pacchetto 5 modifiche: 99€.</p>
+        </div>
+      </div>
+
+      <div class="extra-bundle-grid">
+        <div class="extra-bundle reveal">
+          <p class="extra-bundle-kicker">Bundle</p>
+          <h3>Presenza Completa</h3>
+          <p>Grafiche + rebranding, 10 foto, attivazione social.</p>
+          <p class="extra-bundle-price"><span class="was">399€</span> 349€</p>
+        </div>
+        <div class="extra-bundle reveal">
+          <p class="extra-bundle-kicker">Bundle</p>
+          <h3>Multilingua Turistico</h3>
+          <p>2 lingue extra su Smart Site — pensato per hotel, B&amp;B, rifugi.</p>
+          <p class="extra-bundle-price"><span class="was">298€</span> 249€</p>
+        </div>
       </div>
     </div>
   </section>

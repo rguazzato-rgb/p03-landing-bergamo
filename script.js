@@ -281,6 +281,50 @@
     }
   }
 
+  // Pricing — tab pacchetti/confronta + switch primo anno/rinnovo
+  var pricingTabCards = document.getElementById("pricingTabCards");
+  var pricingTabTable = document.getElementById("pricingTabTable");
+  var pricingCardsPanel = document.getElementById("pricingCards");
+  var pricingTablePanel = document.getElementById("pricingTable");
+
+  function selectPricingTab(showTable) {
+    if (pricingTabCards) {
+      pricingTabCards.classList.toggle("is-active", !showTable);
+      pricingTabCards.setAttribute("aria-selected", showTable ? "false" : "true");
+    }
+    if (pricingTabTable) {
+      pricingTabTable.classList.toggle("is-active", showTable);
+      pricingTabTable.setAttribute("aria-selected", showTable ? "true" : "false");
+    }
+    if (pricingCardsPanel) pricingCardsPanel.hidden = showTable;
+    if (pricingTablePanel) pricingTablePanel.hidden = !showTable;
+  }
+  if (pricingTabCards && pricingTabTable) {
+    pricingTabCards.addEventListener("click", function () { selectPricingTab(false); });
+    pricingTabTable.addEventListener("click", function () { selectPricingTab(true); });
+  }
+
+  var pricingSwitch = document.getElementById("pricingSwitch");
+  var pricingToggleLabels = document.querySelectorAll(".pricing-toggle-label");
+  var pricingPriceEls = document.querySelectorAll("[data-primo-price]");
+  if (pricingSwitch && pricingPriceEls.length) {
+    pricingSwitch.addEventListener("click", function () {
+      var showRinnovo = pricingSwitch.getAttribute("aria-checked") !== "true";
+      pricingSwitch.setAttribute("aria-checked", showRinnovo ? "true" : "false");
+      pricingSwitch.classList.toggle("is-on", showRinnovo);
+      pricingToggleLabels.forEach(function (label) {
+        var isRinnovoLabel = label.getAttribute("data-toggle-label") === "rinnovo";
+        label.classList.toggle("is-active", isRinnovoLabel === showRinnovo);
+      });
+      pricingPriceEls.forEach(function (el) {
+        var amountEl = el.querySelector(".pricing-amount");
+        var periodEl = el.querySelector(".pricing-period");
+        if (amountEl) amountEl.textContent = showRinnovo ? el.getAttribute("data-rinnovo-price") : el.getAttribute("data-primo-price");
+        if (periodEl) periodEl.textContent = showRinnovo ? el.getAttribute("data-rinnovo-period") : el.getAttribute("data-primo-period");
+      });
+    });
+  }
+
   function animateCount(el) {
     var target = parseInt(el.getAttribute("data-count"), 10) || 0;
     var duration = 900;
